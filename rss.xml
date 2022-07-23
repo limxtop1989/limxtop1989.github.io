@@ -19,8 +19,8 @@
             <link>https://limxtop1989.github.io/limxtop/2022/02/24/Android-view-canvas-%E5%9D%90%E6%A0%87%E7%B3%BB/</link>
             <category term="Android, view coordinate, canvas coordinate, 坐标系" scheme="https://limxtop1989.github.io/limxtop/tags/Android-view-coordinate-canvas-coordinate-%E5%9D%90%E6%A0%87%E7%B3%BB/" />
             <pubDate>Thu, 24 Feb 2022 19:22:26 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;View 坐标系原点在 parent view 左上角，left, top, right, bottom 是 child view 左上角和右下角相对坐标轴的距离，rawX &amp;amp; rawY 是&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png&#34; alt=&#34;View 坐标系&#34; /&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;View 坐标系原点在 parent view 左上角，left, top, right, bottom 是 child view 左上角和右下角相对坐标轴的距离。&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;a href=&#34;https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png&#34;&gt;https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png&lt;/a&gt;&amp;quot; zoom=&amp;quot;style:50%&amp;quot;/&amp;gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;img src=&amp;quot;&lt;a href=&#34;https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png&#34;&gt;https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png&lt;/a&gt;&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
  ]]></description>
         </item>
