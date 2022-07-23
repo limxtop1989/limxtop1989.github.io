@@ -11,7 +11,7 @@
             "url": "https://limxtop1989.github.io/limxtop/2022/02/24/Android-view-canvas-%E5%9D%90%E6%A0%87%E7%B3%BB/",
             "title": "Android view & canvas 坐标系",
             "date_published": "2022-02-24T11:22:26.000Z",
-            "content_html": "<p>View 坐标系原点在 parent view 左上角，left, top, right, bottom 是 child view 左上角和右下角相对坐标轴的距离。</p>\n<p>&lt;img src=&quot;<a href=\"https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png\">https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png</a>&quot; zoom=&quot;style:50%&quot;/&gt;</p>\n<p>&lt;img src=&quot;<a href=\"https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png\">https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png</a>&quot; style=&quot;zoom:50%;&quot; /&gt;</p>\n",
+            "content_html": "<p>View 坐标系原点在 parent view 左上角，left, top, right, bottom 是 child view 左上角和右下角相对坐标轴的距离，rawX &amp; rawY 是</p>\n<p>&lt;img src=&quot;<a href=\"https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png\">https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png</a>&quot; style=&quot;zoom:50%&quot; /&gt;</p>\n<p>&lt;img src=&quot;<a href=\"https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png\">https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png</a>&quot; style=&quot;zoom:50%;&quot; /&gt;</p>\n",
             "tags": [
                 "Android, view coordinate, canvas coordinate, 坐标系"
             ]
