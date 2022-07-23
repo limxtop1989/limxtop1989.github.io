@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ViewModel源码剖析 | 若批评不自由，则赞美无意义</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ViewModel 源码剖析示例代码ViewModel负责数据存储，借助LiveData，实现异步获取数据，完成后，通知UI观察者，更新UI 1234567891011121314151617public class MyViewModel extends ViewModel &amp;#123;    private MutableLiveData&lt;List&lt;User&gt;&gt; use">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ViewModel源码剖析">
+<meta property="og:url" content="https://limxtop1989.github.io/limxtop/2021/09/19/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/index.html">
+<meta property="og:site_name" content="若批评不自由，则赞美无意义">
+<meta property="og:description" content="ViewModel 源码剖析示例代码ViewModel负责数据存储，借助LiveData，实现异步获取数据，完成后，通知UI观察者，更新UI 1234567891011121314151617public class MyViewModel extends ViewModel &amp;#123;    private MutableLiveData&lt;List&lt;User&gt;&gt; use">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2021/09/8a107bebc30102c8.png">
+<meta property="article:published_time" content="2021-09-19T10:44:37.000Z">
+<meta property="article:modified_time" content="2022-07-23T10:38:56.391Z">
+<meta property="article:author" content="文理兼修电脑首席">
+<meta property="article:tag" content="ViewModel源码剖析, Android, ViewModel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2021/09/8a107bebc30102c8.png">
+  
+    <link rel="alternate" href="/limxtop/atom.xml" title="若批评不自由，则赞美无意义" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/limxtop/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/limxtop/" id="logo">若批评不自由，则赞美无意义</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/limxtop/">Home</a>
+        
+          <a class="main-nav-link" href="/limxtop/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/limxtop/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://limxtop1989.github.io/limxtop"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ViewModel源码剖析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/limxtop/2021/09/19/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/" class="article-date">
+  <time datetime="2021-09-19T10:44:37.000Z" itemprop="datePublished">2021-09-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ViewModel源码剖析
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ViewModel-源码剖析"><a href="#ViewModel-源码剖析" class="headerlink" title="ViewModel 源码剖析"></a>ViewModel 源码剖析</h1><h1 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h1><p>ViewModel负责数据存储，借助LiveData，实现异步获取数据，完成后，通知UI观察者，更新UI</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyViewModel</span> <span class="keyword">extends</span> <span class="title">ViewModel</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> MutableLiveData&lt;List&lt;User&gt;&gt; users;</span><br><span class="line">    <span class="keyword">public</span> LiveData&lt;List&lt;User&gt;&gt; getUsers() &#123;</span><br><span class="line">        <span class="keyword">if</span> (users == <span class="keyword">null</span>) &#123;</span><br><span class="line">            users = <span class="keyword">new</span> MutableLiveData&lt;List&lt;User&gt;&gt;();</span><br><span class="line">            loadUsers();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> users;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">loadUsers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Do an asynchronous operation to fetch users.</span></span><br><span class="line">				List&lt;User&gt; requestResult = requestUsers();</span><br><span class="line">				<span class="comment">// Once value changes, observer will be notified.</span></span><br><span class="line">				users.set(requestResult);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>UI层注册数据变更监听。注意ViewModelProvider构造器参数是哪个Activity，Fragment实例，ViewModel实例化后，其引用寄存在该实例内。他们都实现ViewModelStoreOwner接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Create a ViewModel the first time the system calls an activity&#x27;s onCreate() method.</span></span><br><span class="line">        <span class="comment">// Re-created activities receive the same MyViewModel instance created by the first activity.</span></span><br><span class="line">				<span class="comment">// 1. ViewModel实例挂载在this实例里，有点相当于是this实例的成员变量</span></span><br><span class="line">        MyViewModel model = <span class="keyword">new</span> ViewModelProvider(<span class="keyword">this</span>).get(MyViewModel.class);</span><br><span class="line">        <span class="comment">// 2. 这里的this参数，决定观察者的生命周期。注意，如果此参数是activity实例，而当前类是fragment，则fragment实例内存泄漏</span></span><br><span class="line">        model.getUsers().observe(<span class="keyword">this</span>, users -&gt; &#123;</span><br><span class="line">            <span class="comment">// update UI</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>注意，observe这里第一个参数，决定观察者的生命周期。所以，如下示例代码，此参数是activity实例，而当前类是fragment，则fragment实例内存泄漏，因为监听实例生命周期和Activity一致，而它持有Fragment实例引用，导致Fragment在Activity生命周期内无法被回收。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Create a ViewModel the first time the system calls an activity&#x27;s onCreate() method.</span></span><br><span class="line">        <span class="comment">// Re-created activities receive the same MyViewModel instance created by the first activity.</span></span><br><span class="line">        MyViewModel model = <span class="keyword">new</span> ViewModelProvider(<span class="keyword">this</span>).get(MyViewModel.class);</span><br><span class="line">        </span><br><span class="line">        model.getUsers().observe(requireActivity(), users -&gt; &#123;</span><br><span class="line">            <span class="comment">// update UI</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="源码剖析"><a href="#源码剖析" class="headerlink" title="源码剖析"></a>源码剖析</h1><p>先从ViewModel实例化开始，首先要解决ViewModel如何实例化，并存放实例，便后续获取实例。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">androidx.lifecycle.ViewModelProvider.java</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Creates &#123;<span class="doctag">@code</span> ViewModelProvider&#125;. This will create &#123;<span class="doctag">@code</span> ViewModels&#125;</span></span><br><span class="line"><span class="comment"> * and retain them in a store of the given &#123;<span class="doctag">@code</span> ViewModelStoreOwner&#125;.</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> * This method will use the</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@link</span> HasDefaultViewModelProviderFactory#getDefaultViewModelProviderFactory() default factory&#125;</span></span><br><span class="line"><span class="comment"> * if the owner implements &#123;<span class="doctag">@link</span> HasDefaultViewModelProviderFactory&#125;. Otherwise, a</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@link</span> NewInstanceFactory&#125; will be used.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ViewModelProvider</span><span class="params">(<span class="meta">@NonNull</span> ViewModelStoreOwner owner)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>(owner.getViewModelStore(), owner <span class="keyword">instanceof</span> HasDefaultViewModelProviderFactory</span><br><span class="line">            ? ((HasDefaultViewModelProviderFactory) owner).getDefaultViewModelProviderFactory()</span><br><span class="line">            : NewInstanceFactory.getInstance());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Creates &#123;<span class="doctag">@code</span> ViewModelProvider&#125;, which will create &#123;<span class="doctag">@code</span> ViewModels&#125; via the given</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@code</span> Factory&#125; and retain them in a store of the given &#123;<span class="doctag">@code</span> ViewModelStoreOwner&#125;.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> owner   a &#123;<span class="doctag">@code</span> ViewModelStoreOwner&#125; whose &#123;<span class="doctag">@link</span> ViewModelStore&#125; will be used to</span></span><br><span class="line"><span class="comment"> *                retain &#123;<span class="doctag">@code</span> ViewModels&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> factory a &#123;<span class="doctag">@code</span> Factory&#125; which will be used to instantiate</span></span><br><span class="line"><span class="comment"> *                new &#123;<span class="doctag">@code</span> ViewModels&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ViewModelProvider</span><span class="params">(<span class="meta">@NonNull</span> ViewModelStoreOwner owner, <span class="meta">@NonNull</span> Factory factory)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>(owner.getViewModelStore(), factory);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Creates &#123;<span class="doctag">@code</span> ViewModelProvider&#125;, which will create &#123;<span class="doctag">@code</span> ViewModels&#125; via the given</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@code</span> Factory&#125; and retain them in the given &#123;<span class="doctag">@code</span> store&#125;.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> store   &#123;<span class="doctag">@code</span> ViewModelStore&#125; where ViewModels will be stored.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> factory factory a &#123;<span class="doctag">@code</span> Factory&#125; which will be used to instantiate</span></span><br><span class="line"><span class="comment"> *                new &#123;<span class="doctag">@code</span> ViewModels&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ViewModelProvider</span><span class="params">(<span class="meta">@NonNull</span> ViewModelStore store, <span class="meta">@NonNull</span> Factory factory)</span> </span>&#123;</span><br><span class="line">    mFactory = factory;</span><br><span class="line">    mViewModelStore = store;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Activity，Fragment实例，他们都实现ViewModelStoreOwner接口，看这名字，顾名思义，就是提供存放ViewModel实例的地方。同时，ViewModelStoreOwner 可能自带ViewModel构造工厂，没有的话，就使用ViewModelProvider 内的NewInstanceFactory实例。</p>
+<p>ViewModelStoreOwner 返回ViewModelStore，内部就是一个Map，key是<code>ViewModelProvider(this).get(MyViewModel.class);</code>get方法传入ViewModel class的canonicalName，value就是对应的ViewModel实例啦。Activity 或者 Fragment 持有ViewModelStore引用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">androidx.lifecycle.ViewModelProvider</span><br><span class="line"><span class="keyword">public</span> &lt;T extends ViewModel&gt; <span class="function">T <span class="title">get</span><span class="params">(<span class="meta">@NonNull</span> Class&lt;T&gt; modelClass)</span> </span>&#123;</span><br><span class="line">    String canonicalName = modelClass.getCanonicalName();</span><br><span class="line">    <span class="keyword">if</span> (canonicalName == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">&quot;Local and anonymous classes can not be ViewModels&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> get(DEFAULT_KEY + <span class="string">&quot;:&quot;</span> + canonicalName, modelClass);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> &lt;T extends ViewModel&gt; <span class="function">T <span class="title">get</span><span class="params">(<span class="meta">@NonNull</span> String key, <span class="meta">@NonNull</span> Class&lt;T&gt; modelClass)</span> </span>&#123;</span><br><span class="line">    ViewModel viewModel = mViewModelStore.get(key);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (modelClass.isInstance(viewModel)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (mFactory <span class="keyword">instanceof</span> OnRequeryFactory) &#123;</span><br><span class="line">            ((OnRequeryFactory) mFactory).onRequery(viewModel);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (T) viewModel;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//noinspection StatementWithEmptyBody</span></span><br><span class="line">        <span class="keyword">if</span> (viewModel != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// <span class="doctag">TODO:</span> log a warning.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (mFactory <span class="keyword">instanceof</span> KeyedFactory) &#123;</span><br><span class="line">        viewModel = ((KeyedFactory) mFactory).create(key, modelClass);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        viewModel = mFactory.create(modelClass);</span><br><span class="line">    &#125;</span><br><span class="line">    mViewModelStore.put(key, viewModel);</span><br><span class="line">    <span class="keyword">return</span> (T) viewModel;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结下，ViewModelStoreOwner 提供负责存储ViewModel的类：ViewModelStore，ViewModel由Factory创建，然后放在ViewModelStore实例内，下次直接从ViewModelStore 通过get方法获取，单例。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2021/09/8a107bebc30102c8.png" alt="ViewModel"></p>
+<h1 id="AndroidViewModel-amp-ViewModel"><a href="#AndroidViewModel-amp-ViewModel" class="headerlink" title="AndroidViewModel &amp; ViewModel"></a>AndroidViewModel &amp; ViewModel</h1><p>ViewModel 不可以强引用Context，如果确实需要，则使用AndroidViewModel，它持有Application的引用。解决需要的同时，避免Activity泄漏。</p>
+<p><code>ViewModelProvider</code> 默认实例化的ViewModel 由NewInstanceFactory 创建。AndroidViewModel 由AndroidViewModelFactory 通过作为实例化<code>ViewModelProvider</code> 构造器的Factory 参数创建。</p>
+<p>Activity &amp; Fragment 也同时实现<code>HasDefaultViewModelProviderFactory</code>接口。看下<code>SavedStateViewModelFactory</code> ，区分是实例化 ViewModel 还是AndroidViewModel，并增加保存状态的处理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">androidx.lifecycle.SavedStateViewModelFactory</span><br><span class="line"><span class="meta">@NonNull</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> &lt;T extends ViewModel&gt; <span class="function">T <span class="title">create</span><span class="params">(<span class="meta">@NonNull</span> String key, <span class="meta">@NonNull</span> Class&lt;T&gt; modelClass)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> isAndroidViewModel = AndroidViewModel.class.isAssignableFrom(modelClass);</span><br><span class="line">    Constructor&lt;T&gt; constructor;</span><br><span class="line">    <span class="keyword">if</span> (isAndroidViewModel &amp;&amp; mApplication != <span class="keyword">null</span>) &#123;</span><br><span class="line">        constructor = findMatchingConstructor(modelClass, ANDROID_VIEWMODEL_SIGNATURE);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        constructor = findMatchingConstructor(modelClass, VIEWMODEL_SIGNATURE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// doesn&#x27;t need SavedStateHandle</span></span><br><span class="line">    <span class="keyword">if</span> (constructor == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> mFactory.create(modelClass);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    SavedStateHandleController controller = SavedStateHandleController.create(</span><br><span class="line">            mSavedStateRegistry, mLifecycle, key, mDefaultArgs);</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        T viewmodel;</span><br><span class="line">        <span class="keyword">if</span> (isAndroidViewModel &amp;&amp; mApplication != <span class="keyword">null</span>) &#123;</span><br><span class="line">            viewmodel = constructor.newInstance(mApplication, controller.getHandle());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            viewmodel = constructor.newInstance(controller.getHandle());</span><br><span class="line">        &#125;</span><br><span class="line">        viewmodel.setTagIfAbsent(TAG_SAVED_STATE_HANDLE_CONTROLLER, controller);</span><br><span class="line">        <span class="keyword">return</span> viewmodel;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">&quot;Failed to access &quot;</span> + modelClass, e);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">&quot;A &quot;</span> + modelClass + <span class="string">&quot; cannot be instantiated.&quot;</span>, e);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InvocationTargetException e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">&quot;An exception happened in constructor of &quot;</span></span><br><span class="line">                + modelClass, e.getCause());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ViewModel就是一个壳，与ViewModelStoreOwner共存亡。但Activity因onConfigurationChanged重建后，会获取上一个Activity ViewModelStore，恢复上一个ViewModel。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">androidx.activity.<span class="function">ComponentActivity</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ensureViewModelStore</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (mViewModelStore == <span class="keyword">null</span>) &#123;</span><br><span class="line">        NonConfigurationInstances nc =</span><br><span class="line">                (NonConfigurationInstances) getLastNonConfigurationInstance();</span><br><span class="line">        <span class="keyword">if</span> (nc != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// Restore the ViewModelStore from NonConfigurationInstances</span></span><br><span class="line">            mViewModelStore = nc.viewModelStore;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (mViewModelStore == <span class="keyword">null</span>) &#123;</span><br><span class="line">            mViewModelStore = <span class="keyword">new</span> ViewModelStore();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="OnRequeryFactory-接口"><a href="#OnRequeryFactory-接口" class="headerlink" title="OnRequeryFactory 接口"></a>OnRequeryFactory 接口</h1><p>用途：提供从ViewModelProvider get 返回ViewModel实例前的回调，可以在返回前对ViewModel做些预处理。SavedStateViewModelFactory实现此接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">androidx.lifecycle.SavedStateViewModelFactory</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">onRequery</span><span class="params">(<span class="meta">@NonNull</span> ViewModel viewModel)</span> </span>&#123;</span><br><span class="line">    attachHandleIfNeeded(viewModel, mSavedStateRegistry, mLifecycle);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">androidx.lifecycle.ViewModelProvider</span><br><span class="line"><span class="keyword">public</span> &lt;T extends ViewModel&gt; <span class="function">T <span class="title">get</span><span class="params">(<span class="meta">@NonNull</span> String key, <span class="meta">@NonNull</span> Class&lt;T&gt; modelClass)</span> </span>&#123;</span><br><span class="line">    ViewModel viewModel = mViewModelStore.get(key);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (modelClass.isInstance(viewModel)) &#123;</span><br><span class="line">				<span class="comment">// ViewModel返回前处理</span></span><br><span class="line">        <span class="keyword">if</span> (mFactory <span class="keyword">instanceof</span> OnRequeryFactory) &#123;</span><br><span class="line">            ((OnRequeryFactory) mFactory).onRequery(viewModel);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (T) viewModel;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//noinspection StatementWithEmptyBody</span></span><br><span class="line">        <span class="keyword">if</span> (viewModel != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// <span class="doctag">TODO:</span> log a warning.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (mFactory <span class="keyword">instanceof</span> KeyedFactory) &#123;</span><br><span class="line">        viewModel = ((KeyedFactory) mFactory).create(key, modelClass);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        viewModel = mFactory.create(modelClass);</span><br><span class="line">    &#125;</span><br><span class="line">    mViewModelStore.put(key, viewModel);</span><br><span class="line">    <span class="keyword">return</span> (T) viewModel;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://limxtop1989.github.io/limxtop/2021/09/19/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/" data-id="cl5xromkl00083s1376p61z76" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/limxtop/tags/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90-Android-ViewModel/" rel="tag">ViewModel源码剖析, Android, ViewModel</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/limxtop/2021/10/18/FragmentManager%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%901/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          FragmentManager源码剖析一
+        
+      </div>
+    </a>
+  
+  
+    <a href="/limxtop/2021/08/18/English-introduction/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">English-introduction</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/limxtop/tags/Android-view-coordinate-canvas-coordinate-%E5%9D%90%E6%A0%87%E7%B3%BB/" rel="tag">Android, view coordinate, canvas coordinate, 坐标系</a></li><li class="tag-list-item"><a class="tag-list-link" href="/limxtop/tags/LifeCycle-LiveData/" rel="tag">LifeCycle, LiveData</a></li><li class="tag-list-item"><a class="tag-list-link" href="/limxtop/tags/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90-Android-ViewModel/" rel="tag">ViewModel源码剖析, Android, ViewModel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/limxtop/tags/%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" rel="tag">英语,自学,入门,指南,方法论,词典</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/limxtop/tags/Android-view-coordinate-canvas-coordinate-%E5%9D%90%E6%A0%87%E7%B3%BB/" style="font-size: 10px;">Android, view coordinate, canvas coordinate, 坐标系</a> <a href="/limxtop/tags/LifeCycle-LiveData/" style="font-size: 10px;">LifeCycle, LiveData</a> <a href="/limxtop/tags/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90-Android-ViewModel/" style="font-size: 10px;">ViewModel源码剖析, Android, ViewModel</a> <a href="/limxtop/tags/%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" style="font-size: 10px;">英语,自学,入门,指南,方法论,词典</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/limxtop/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/limxtop/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/limxtop/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/limxtop/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/limxtop/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/limxtop/2022/02/24/Android-view-canvas-%E5%9D%90%E6%A0%87%E7%B3%BB/">Android view &amp; canvas 坐标系</a>
+          </li>
+        
+          <li>
+            <a href="/limxtop/2022/02/14/LifeCycle-LiveData%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/">LifeCycle &amp; LiveData源码剖析</a>
+          </li>
+        
+          <li>
+            <a href="/limxtop/2021/10/18/FragmentManager%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%902/">FragmentManager源码剖析二</a>
+          </li>
+        
+          <li>
+            <a href="/limxtop/2021/10/18/FragmentManager%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%901/">FragmentManager源码剖析一</a>
+          </li>
+        
+          <li>
+            <a href="/limxtop/2021/09/19/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/">ViewModel源码剖析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 文理兼修电脑首席<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/limxtop/" class="mobile-nav-link">Home</a>
+  
+    <a href="/limxtop/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/limxtop/fancybox/jquery.fancybox.css">
+
+  
+<script src="/limxtop/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/limxtop/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
