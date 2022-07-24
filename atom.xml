@@ -16,8 +16,8 @@
         <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2022/02/24/Android-view-canvas-%E5%9D%90%E6%A0%87%E7%B3%BB/"/>
         <content type="html">&lt;p&gt;View 坐标系原点在 parent view 左上角，left, top, right, bottom 是 child view 左上角和右下角相对坐标轴的距离。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png&#34; alt=&#34;View 坐标系&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMy5ibXAub3ZoL2ltZ3MvMjAyMi8wMi8yNjhiZTllOTdmYjFmOWU3LnBuZw==&#34;&gt;https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png&lt;/span&gt;&amp;quot; style=&amp;quot;zoom:50%&amp;quot; /&amp;gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMy5ibXAub3ZoL2ltZ3MvMjAyMi8wMi8wMTcyYWM2Njk3OTk4ZWQ3LnBuZw==&#34;&gt;https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png&lt;/span&gt;&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/02/268be9e97fb1f9e7.png&#34; style=&#34;zoom:50%&#34; /&gt;
+&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/02/0172ac6697998ed7.png&#34; style=&#34;zoom:50%;&#34; /&gt;
 </content>
         <category term="Android, view coordinate, canvas coordinate, 坐标系" scheme="https://limxtop1989.github.io/limxtop/tags/Android-view-coordinate-canvas-coordinate-%E5%9D%90%E6%A0%87%E7%B3%BB/" />
         <updated>2022-02-24T11:22:26.000Z</updated>
@@ -265,7 +265,7 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2021/08/305a1480dcfc9dbd.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Mac 上会有如下界面异常，&lt;/p&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMy5ibXAub3ZoL2ltZ3MvMjAyMS8wOC9iYWQzNmU2ODM1MDYxNGQ0LnBuZw==&#34;&gt;https://s3.bmp.ovh/imgs/2021/08/bad36e68350614d4.png&lt;/span&gt;&amp;quot; style=&amp;quot;zoom:100%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2021/08/bad36e68350614d4.png&#34; style=&#34;zoom:100%;&#34; /&gt;
 &lt;p&gt;点击 Preference 菜单，如下截图勾选 “Expand optional parts”&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2021/08/f3565b6d9c3abefc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;最后，可以把这个选项勾选。&lt;/p&gt;
@@ -290,9 +290,9 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMy5ibXAub3ZoL2ltZ3MvMjAyMS8wOC8wNWQ1MjE5ZDQxOTM0Y2M1LnBuZw==&#34;&gt;https://s3.bmp.ovh/imgs/2021/08/05d5219d41934cc5.png&lt;/span&gt;&amp;quot; style=&amp;quot;zoom:25%;&amp;quot; /&amp;gt;&lt;/th&gt;
+&lt;th&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2021/08/05d5219d41934cc5.png&#34; style=&#34;zoom:25%;&#34; /&gt;&lt;/th&gt;
 &lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&amp;lt;img src = &amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvZTZjOWQyNGVneTFoNGgwenBpNjJ2ajIwdTAxYW9xNjAuanBn&#34;&gt;https://tva1.sinaimg.cn/large/e6c9d24egy1h4h0zpi62vj20u01aoq60.jpg&lt;/span&gt;&amp;quot; style=&amp;quot;zoom:25%&amp;quot; /&amp;gt;&lt;/th&gt;
+&lt;th&gt;&lt;img src = &#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h4h0zpi62vj20u01aoq60.jpg&#34; style=&#34;zoom:25%&#34; /&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
