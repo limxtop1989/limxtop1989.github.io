@@ -8,8 +8,28 @@
     <author>
       <name>文理兼修电脑首席</name>
     </author>
-    <updated>2022-07-24T14:42:18.000Z</updated>
+    <updated>2022-08-19T14:42:18.000Z</updated>
     <category term="Android" />
+    <entry>
+        <id>https://limxtop1989.github.io/limxtop/2022/08/19/android-touch-event/</id>
+        <title>Android Touch Event</title>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2022/08/19/android-touch-event/"/>
+        <content type="html">&lt;h1 id=&#34;return-true-at-ontouchevent-of-the-child-view-during-action-down&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#return-true-at-ontouchevent-of-the-child-view-during-action-down&#34;&gt;#&lt;/a&gt; Return true at onTouchEvent of the child view during action down&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5cgobq43vj20u40u0n18.jpg&#34; alt=&#34;touch down&#34; /&gt;&lt;br /&gt;
+The subsequent move and up actions will be dispatched to the child view directly, but the parent views still have a chance to intercept the actions.&lt;br /&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5ch3isl8pj20u00uwdk6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Once the parent views intercept the touch event during move action by return true at  &lt;code&gt;onInterceptToucheEvent&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5chap23ivj20vs0u042q.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+a cancel event is generated and dispatched to the intercepted child view, in the mean while, the subsequent move and up actions will not dispatch to parent view directly rather than the child view.&lt;br /&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5ch8wfx5cj20u00uctcw.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;return-false-at-ontouchevent-the-child-view-during-action-down&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#return-false-at-ontouchevent-the-child-view-during-action-down&#34;&gt;#&lt;/a&gt; Return false at onTouchEvent the child view during action down&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5ch5h9serj20wl0u0jvn.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+The subsequent move and up actions will not be dispatched to the child view any more.&lt;br /&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5ch6if7mdj20u00uyq73.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="Android, Touch Event, 触摸事件" scheme="https://limxtop1989.github.io/limxtop/tags/Android-Touch-Event-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/" />
+        <updated>2022-08-19T14:42:18.000Z</updated>
+    </entry>
     <entry>
         <id>https://limxtop1989.github.io/limxtop/2022/07/24/Android-animation-principles/</id>
         <title>Android 动画原理</title>
