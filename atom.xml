@@ -531,16 +531,72 @@ The subsequent move and up actions will not be dispatched to the child view any 
         <updated>2021-09-19T10:44:37.000Z</updated>
     </entry>
     <entry>
-        <id>https://limxtop1989.github.io/limxtop/2021/08/18/English-introduction/</id>
-        <title>English-introduction</title>
-        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/08/18/English-introduction/"/>
-        <content type="html">&lt;h1 id=&#34;英语自学指南&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#英语自学指南&#34;&gt;#&lt;/a&gt; 英语自学指南&lt;/h1&gt;
-&lt;p&gt;Email: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmxpbXh0b3BAZ21haWwuY29t&#34;&gt;limxtop@gmail.com&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目录&#34;&gt;#&lt;/a&gt; 目录&lt;/h1&gt;
+        <id>https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/</id>
+        <title>Android Activity 转移类型检测</title>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/"/>
+        <content type="html">&lt;p&gt;Requirement:：&lt;/p&gt;
+&lt;p&gt;应用内有些 Activity 数据敏感，需要区别对待，这里需要识别首次进入红色 Activity 集合内，在红色 Activity 集合内跳转，和跳出红色 Activity 集合三种情况。【当红色 Activity 集合是应用内的 Activity 集合时，就相当于首次进入应用，应用内界面跳转和退出应用的判定】&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aZWR&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aZWR.png&#34; alt=&#34;W1aZWR.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;算法描述：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;明确坚持和投入训练是学习掌握任何一门语言和科学技术的必要条件。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;定义一个保存 Activity Simple Name 的集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Activity onResume 时，将此 Activity Simple Name 加入集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;当集合元素个数等于&lt;strong&gt; 1&lt;/strong&gt; 时，为首次进入该应用打开的第一个 Activity。&lt;/li&gt;
+&lt;li&gt;当集合元素个数等于&lt;strong&gt; 2&lt;/strong&gt; 时，表示打开应用内的其他 Activity。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Activity onStop 时，将此 Activity Simple Name 移出集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;当集合元素个数为&lt;strong&gt; 1&lt;/strong&gt; 时，表示在应用内跳转。&lt;/li&gt;
+&lt;li&gt;当集合元素个数为&lt;strong&gt; 0&lt;/strong&gt; 时，表示打开其他应用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;原理：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aVY9&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aVY9.png&#34; alt=&#34;W1aVY9.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由上图可知，Activity A 启动 Activity B 时，执行顺序是 Activity A&#39;s onPause () -&amp;gt; Activity B&#39;s onResume () -&amp;gt; Activity A&#39;s onStop ()。应用内的 Activity 在执行 onResume () &amp;amp; onStop () 时，我们规约将其 Activity Simple Name 加入 &amp;amp; 移出集合，而启动应用外的 Activity 我们没有能力如此操作。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首次进入 Activity 集合，应用内的 Activity onResume 被调用；&lt;/li&gt;
+&lt;li&gt;在 Activity 集合间跳转，应用内的 Activity onResume &amp;amp; onStop 被调用；&lt;/li&gt;
+&lt;li&gt;跳出 Activity 集合，应用内的 Activity onStop 被调用；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以，启动应用内还是应用外的 Activity 在此产生差异，而差异让程序识别成为可能。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;当 Activity B 是&lt;strong&gt;应用内 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
+&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;2&lt;/strong&gt;（Activity A&amp;amp;B）        &lt;strong&gt;1&lt;/strong&gt;（Activity B）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当 Activity B 是&lt;strong&gt;应用外 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
+&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;1&lt;/strong&gt;（Activity A）              &lt;strong&gt;0&lt;/strong&gt;（）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2021-07-17T12:26:30.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://limxtop1989.github.io/limxtop/2017/08/18/English-introduction/</id>
+        <title>英语自学指南</title>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2017/08/18/English-introduction/"/>
+        <content type="html">&lt;h1 id=&#34;联系我&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#联系我&#34;&gt;#&lt;/a&gt; 联系我&lt;/h1&gt;
+&lt;p&gt;Email: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmxpbXh0b3BAZ21haWwuY29t&#34;&gt;limxtop@gmail.com&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;本文要点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本文要点&#34;&gt;#&lt;/a&gt; 本文要点&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;解释很多人十年英语刻苦学习，最后多以失败告终的根源。&lt;/li&gt;
+&lt;li&gt;解释坚持和投入&lt;strong&gt;有效&lt;/strong&gt;的训练是学习掌握任何一门语言和科学技术的必要条件。&lt;/li&gt;
 &lt;li&gt;阐述成人学习掌握新语言的能力胜于孩童，只是缺乏训练环境。&lt;/li&gt;
-&lt;li&gt;解释如何搭建个人训练环境并展开有效训练。&lt;/li&gt;
+&lt;li&gt;陈述如何搭建个人训练环境并展开有效训练。&lt;/li&gt;
 &lt;li&gt;描述如何降低训练难度，使学习变得舒适自然，无需头悬梁，锥刺股。&lt;/li&gt;
 &lt;li&gt;最后附上词典安装配置和语法书。&lt;/li&gt;
 &lt;/ol&gt;
@@ -599,6 +655,8 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;h2 id=&#34;系统学习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统学习&#34;&gt;#&lt;/a&gt; 系统学习&lt;/h2&gt;
 &lt;p&gt;按照情景或者场景系统地学习词汇和用法，比如房子的物品名称，以及其相关的动词和对话表达，如图 4。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2021/08/b8518865846f4d62.webp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;高频词汇优先&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#高频词汇优先&#34;&gt;#&lt;/a&gt; 高频词汇优先&lt;/h2&gt;
+&lt;p&gt;高频词汇平时用的多，自然比较容易记住，产出投入比比较高。&lt;/p&gt;
 &lt;p&gt;学到的词汇要平时多用，听说读写最好雨露均沾。&lt;/p&gt;
 &lt;h1 id=&#34;审慎对待任何学习方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#审慎对待任何学习方法&#34;&gt;#&lt;/a&gt; 审慎对待任何学习方法&lt;/h1&gt;
 &lt;p&gt;中学时代，曾经在书籍上阅读过一段文字，某君总结自己的学习经验时，将自己英语听力的提高归功于自己平时听英文歌曲。于是自己也尝试着去听英文歌。但过了些时日，并没有感觉到听力明显的提升，但也许是自己练习不够，也许自己听的时候并没有全神贯注的听，当然，还有可能这种方法本身就不可能奏效。理论上，只要练习，总会有进步的，但私以为这样的方法收效甚微，毕竟，如果单词你本来就不懂，你是很难通过听来学习掌握的。首先，你得会识字，以此为前提，你可以听懂和表达。意识到这些，已经是多年以后了，以至于，在后来，又几乎重蹈覆辙。&lt;/p&gt;
@@ -648,17 +706,16 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;p&gt;尚未支持，可以考虑使用欧路词典或其他，并按照类似思路，安装词典即可。&lt;/p&gt;
 &lt;h1 id=&#34;写作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写作&#34;&gt;#&lt;/a&gt; 写作&lt;/h1&gt;
 &lt;h2 id=&#34;语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#语法&#34;&gt;#&lt;/a&gt; 语法&lt;/h2&gt;
-&lt;p&gt;写作的基础是正确的语法，语法书我只推荐这本：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dyYW1tYXIuY29kZXl1LmNvbS8=&#34;&gt;旋元佑进阶文法&lt;/span&gt; ，推荐阅读第一章的基本句型和第十六七章的合句和名词子句，就能感同身受，此书是否值得细读了。或者参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8zNDg0MDcxNC8=&#34;&gt;豆瓣的评价&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;写作的基础是正确的语法，语法书我推荐&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dyYW1tYXIuY29kZXl1LmNvbS8=&#34;&gt;旋元佑进阶文法&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNTk3NDM3My8=&#34;&gt;赖氏经典英语语法&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;写作课程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写作课程&#34;&gt;#&lt;/a&gt; 写作课程&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY291cnNlcmEub3JnL3NwZWNpYWxpemF0aW9ucy9hY2FkZW1pYy1lbmdsaXNo&#34;&gt;Academic English: Writing Specialization&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vbmxpbmUuc3RhbmZvcmQuZWR1L2NvdXJzZXMvc29tLXkwMDEwLXdyaXRpbmctc2NpZW5jZXM=&#34;&gt;Writing in the Sciences&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93cml0aW5ncHJvamVjdC5mYXMuaGFydmFyZC5lZHUvcGFnZXMvd3JpdGluZy1ndWlkZXM=&#34;&gt;哈佛写作项目（The Harvard Writing Project）&lt;/span&gt;提供的人文社科英文写作指南，旨在通过为学生提供实用的写作建议、指南和案例来鼓励他们更好地写作。四种主要类型：&lt;/p&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY291cnNlcmEub3JnL3NwZWNpYWxpemF0aW9ucy9hY2FkZW1pYy1lbmdsaXNo&#34;&gt;Academic English: Writing Specialization&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vbmxpbmUuc3RhbmZvcmQuZWR1L2NvdXJzZXMvc29tLXkwMDEwLXdyaXRpbmctc2NpZW5jZXM=&#34;&gt;Writing in the Sciences&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93cml0aW5ncHJvamVjdC5mYXMuaGFydmFyZC5lZHUvcGFnZXMvd3JpdGluZy1ndWlkZXM=&#34;&gt;哈佛写作项目（The Harvard Writing Project）&lt;/span&gt;提供的人文社科英文写作指南，旨在通过为学生提供实用的写作建议、指南和案例来鼓励他们更好地写作。四种主要类型：
 &lt;ul&gt;
 &lt;li&gt;跨学科项目的写作指南&lt;/li&gt;
 &lt;li&gt;特定写作类型的写作指南&lt;/li&gt;
@@ -666,14 +723,15 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;li&gt;通识教育课程写作指南&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNDc1MzAxMS8=&#34;&gt;葛传椝英语写作&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;写作助手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写作助手&#34;&gt;#&lt;/a&gt; 写作助手&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h5zkgxxduvj21q20u0td7.jpg&#34; alt=&#34;Grammarly&#34; /&gt;&lt;br /&gt;
  请安装 Grammarly 浏览器扩展插件，或者安装应用程序。简单常见的语法错误可以自动为你高亮并提供修正建议。&lt;/p&gt;
 &lt;h1 id=&#34;听说&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#听说&#34;&gt;#&lt;/a&gt; 听说&lt;/h1&gt;
-&lt;p&gt;使用 podcast 订阅 BBC learning English 等练习听力，YouTube 看英语视频。去参加英语角，平时和朋友聊天用英语说，都是不错的选择。但，如果读写功底足够扎实，听说其实是水到渠成一般容易。&lt;/p&gt;
+&lt;p&gt;使用 podcast 订阅 BBC learning English 等练习听力，YouTube 看英语视频。去参加英语角，平时和朋友聊天用英语说，都是不错的选择，不说也行，只要习惯用英语思考也可以。但，如果读写功底足够扎实，听说其实是水到渠成一般容易。&lt;/p&gt;
 &lt;h1 id=&#34;最后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最后&#34;&gt;#&lt;/a&gt; 最后&lt;/h1&gt;
-&lt;p&gt;英语的重要性不言而喻，相信各位好奇心切可以阅读到这里，自是一清二楚，希望各位可以学有所成。&lt;strong&gt;如果本文令你受益匪浅，愿意慷慨解囊，可以点击 donate 红色按钮，然后扫描二维码，一分也是爱。分享推荐给身边的朋友，也是不胜感激&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;英语的重要性不言而喻，相信各位好奇心切可以阅读到这里，自是一清二楚，希望各位可以学有所成。&lt;strong&gt;如果本文令你受益匪浅，愿意慷慨解囊，可以点击 donate 红色按钮，然后扫描二维码，一分也是爱。支持域名年费和持续的写作实践。分享推荐给身边的朋友，也是不胜感激&lt;/strong&gt;。&lt;/p&gt;
 &lt;hr class=&#34;footnotes-sep&#34; /&gt;
 &lt;section class=&#34;footnotes&#34;&gt;
 &lt;ol class=&#34;footnotes-list&#34;&gt;
@@ -689,61 +747,6 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;/section&gt;
 </content>
         <category term="英语,自学,入门,指南,方法论,词典" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" />
-        <updated>2021-08-18T13:23:28.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/</id>
-        <title>Android Activity 转移类型检测</title>
-        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/"/>
-        <content type="html">&lt;p&gt;Requirement:：&lt;/p&gt;
-&lt;p&gt;应用内有些 Activity 数据敏感，需要区别对待，这里需要识别首次进入红色 Activity 集合内，在红色 Activity 集合内跳转，和跳出红色 Activity 集合三种情况。【当红色 Activity 集合是应用内的 Activity 集合时，就相当于首次进入应用，应用内界面跳转和退出应用的判定】&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aZWR&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aZWR.png&#34; alt=&#34;W1aZWR.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;算法描述：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;定义一个保存 Activity Simple Name 的集合。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Activity onResume 时，将此 Activity Simple Name 加入集合。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;当集合元素个数等于&lt;strong&gt; 1&lt;/strong&gt; 时，为首次进入该应用打开的第一个 Activity。&lt;/li&gt;
-&lt;li&gt;当集合元素个数等于&lt;strong&gt; 2&lt;/strong&gt; 时，表示打开应用内的其他 Activity。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Activity onStop 时，将此 Activity Simple Name 移出集合。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;当集合元素个数为&lt;strong&gt; 1&lt;/strong&gt; 时，表示在应用内跳转。&lt;/li&gt;
-&lt;li&gt;当集合元素个数为&lt;strong&gt; 0&lt;/strong&gt; 时，表示打开其他应用。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;原理：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aVY9&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aVY9.png&#34; alt=&#34;W1aVY9.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;由上图可知，Activity A 启动 Activity B 时，执行顺序是 Activity A&#39;s onPause () -&amp;gt; Activity B&#39;s onResume () -&amp;gt; Activity A&#39;s onStop ()。应用内的 Activity 在执行 onResume () &amp;amp; onStop () 时，我们规约将其 Activity Simple Name 加入 &amp;amp; 移出集合，而启动应用外的 Activity 我们没有能力如此操作。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;首次进入 Activity 集合，应用内的 Activity onResume 被调用；&lt;/li&gt;
-&lt;li&gt;在 Activity 集合间跳转，应用内的 Activity onResume &amp;amp; onStop 被调用；&lt;/li&gt;
-&lt;li&gt;跳出 Activity 集合，应用内的 Activity onStop 被调用；&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;所以，启动应用内还是应用外的 Activity 在此产生差异，而差异让程序识别成为可能。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;当 Activity B 是&lt;strong&gt;应用内 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
-&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;2&lt;/strong&gt;（Activity A&amp;amp;B）        &lt;strong&gt;1&lt;/strong&gt;（Activity B）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当 Activity B 是&lt;strong&gt;应用外 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
-&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;1&lt;/strong&gt;（Activity A）              &lt;strong&gt;0&lt;/strong&gt;（）&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <updated>2021-07-17T12:26:30.000Z</updated>
+        <updated>2017-08-18T13:23:28.000Z</updated>
     </entry>
 </feed>
