@@ -531,64 +531,9 @@ The subsequent move and up actions will not be dispatched to the child view any 
         <updated>2021-09-19T10:44:37.000Z</updated>
     </entry>
     <entry>
-        <id>https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/</id>
-        <title>Android Activity 转移类型检测</title>
-        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/"/>
-        <content type="html">&lt;p&gt;Requirement:：&lt;/p&gt;
-&lt;p&gt;应用内有些 Activity 数据敏感，需要区别对待，这里需要识别首次进入红色 Activity 集合内，在红色 Activity 集合内跳转，和跳出红色 Activity 集合三种情况。【当红色 Activity 集合是应用内的 Activity 集合时，就相当于首次进入应用，应用内界面跳转和退出应用的判定】&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aZWR&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aZWR.png&#34; alt=&#34;W1aZWR.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;算法描述：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;定义一个保存 Activity Simple Name 的集合。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Activity onResume 时，将此 Activity Simple Name 加入集合。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;当集合元素个数等于&lt;strong&gt; 1&lt;/strong&gt; 时，为首次进入该应用打开的第一个 Activity。&lt;/li&gt;
-&lt;li&gt;当集合元素个数等于&lt;strong&gt; 2&lt;/strong&gt; 时，表示打开应用内的其他 Activity。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Activity onStop 时，将此 Activity Simple Name 移出集合。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;当集合元素个数为&lt;strong&gt; 1&lt;/strong&gt; 时，表示在应用内跳转。&lt;/li&gt;
-&lt;li&gt;当集合元素个数为&lt;strong&gt; 0&lt;/strong&gt; 时，表示打开其他应用。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;原理：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aVY9&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aVY9.png&#34; alt=&#34;W1aVY9.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;由上图可知，Activity A 启动 Activity B 时，执行顺序是 Activity A&#39;s onPause () -&amp;gt; Activity B&#39;s onResume () -&amp;gt; Activity A&#39;s onStop ()。应用内的 Activity 在执行 onResume () &amp;amp; onStop () 时，我们规约将其 Activity Simple Name 加入 &amp;amp; 移出集合，而启动应用外的 Activity 我们没有能力如此操作。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;首次进入 Activity 集合，应用内的 Activity onResume 被调用；&lt;/li&gt;
-&lt;li&gt;在 Activity 集合间跳转，应用内的 Activity onResume &amp;amp; onStop 被调用；&lt;/li&gt;
-&lt;li&gt;跳出 Activity 集合，应用内的 Activity onStop 被调用；&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;所以，启动应用内还是应用外的 Activity 在此产生差异，而差异让程序识别成为可能。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;当 Activity B 是&lt;strong&gt;应用内 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
-&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;2&lt;/strong&gt;（Activity A&amp;amp;B）        &lt;strong&gt;1&lt;/strong&gt;（Activity B）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当 Activity B 是&lt;strong&gt;应用外 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
-&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;1&lt;/strong&gt;（Activity A）              &lt;strong&gt;0&lt;/strong&gt;（）&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <updated>2021-07-17T12:26:30.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://limxtop1989.github.io/limxtop/2017/08/18/English-introduction/</id>
+        <id>https://limxtop1989.github.io/limxtop/2021/08/18/English-introduction/</id>
         <title>英语自学指南</title>
-        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2017/08/18/English-introduction/"/>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/08/18/English-introduction/"/>
         <content type="html">&lt;h1 id=&#34;联系我&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#联系我&#34;&gt;#&lt;/a&gt; 联系我&lt;/h1&gt;
 &lt;p&gt;Email: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmxpbXh0b3BAZ21haWwuY29t&#34;&gt;limxtop@gmail.com&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;本文要点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本文要点&#34;&gt;#&lt;/a&gt; 本文要点&lt;/h1&gt;
@@ -747,6 +692,61 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;/section&gt;
 </content>
         <category term="英语,自学,入门,指南,方法论,词典" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" />
-        <updated>2017-08-18T13:23:28.000Z</updated>
+        <updated>2021-08-18T13:23:28.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/</id>
+        <title>Android Activity 转移类型检测</title>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/"/>
+        <content type="html">&lt;p&gt;Requirement:：&lt;/p&gt;
+&lt;p&gt;应用内有些 Activity 数据敏感，需要区别对待，这里需要识别首次进入红色 Activity 集合内，在红色 Activity 集合内跳转，和跳出红色 Activity 集合三种情况。【当红色 Activity 集合是应用内的 Activity 集合时，就相当于首次进入应用，应用内界面跳转和退出应用的判定】&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aZWR&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aZWR.png&#34; alt=&#34;W1aZWR.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;算法描述：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;定义一个保存 Activity Simple Name 的集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Activity onResume 时，将此 Activity Simple Name 加入集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;当集合元素个数等于&lt;strong&gt; 1&lt;/strong&gt; 时，为首次进入该应用打开的第一个 Activity。&lt;/li&gt;
+&lt;li&gt;当集合元素个数等于&lt;strong&gt; 2&lt;/strong&gt; 时，表示打开应用内的其他 Activity。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Activity onStop 时，将此 Activity Simple Name 移出集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;当集合元素个数为&lt;strong&gt; 1&lt;/strong&gt; 时，表示在应用内跳转。&lt;/li&gt;
+&lt;li&gt;当集合元素个数为&lt;strong&gt; 0&lt;/strong&gt; 时，表示打开其他应用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;原理：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W1aVY9&#34;&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/07/17/W1aVY9.png&#34; alt=&#34;W1aVY9.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由上图可知，Activity A 启动 Activity B 时，执行顺序是 Activity A&#39;s onPause () -&amp;gt; Activity B&#39;s onResume () -&amp;gt; Activity A&#39;s onStop ()。应用内的 Activity 在执行 onResume () &amp;amp; onStop () 时，我们规约将其 Activity Simple Name 加入 &amp;amp; 移出集合，而启动应用外的 Activity 我们没有能力如此操作。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首次进入 Activity 集合，应用内的 Activity onResume 被调用；&lt;/li&gt;
+&lt;li&gt;在 Activity 集合间跳转，应用内的 Activity onResume &amp;amp; onStop 被调用；&lt;/li&gt;
+&lt;li&gt;跳出 Activity 集合，应用内的 Activity onStop 被调用；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以，启动应用内还是应用外的 Activity 在此产生差异，而差异让程序识别成为可能。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;当 Activity B 是&lt;strong&gt;应用内 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
+&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;2&lt;/strong&gt;（Activity A&amp;amp;B）        &lt;strong&gt;1&lt;/strong&gt;（Activity B）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当 Activity B 是&lt;strong&gt;应用外 Activity&lt;/strong&gt; 时，集合内元素个数变迁如下：&lt;/p&gt;
+&lt;p&gt;Activity A&#39;s onPause() -&amp;gt; Activity B&#39;s onResume() -&amp;gt; Activity A&#39;s onStop()&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;（Activity A）         &lt;strong&gt;1&lt;/strong&gt;（Activity A）              &lt;strong&gt;0&lt;/strong&gt;（）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2021-07-17T12:26:30.000Z</updated>
     </entry>
 </feed>
