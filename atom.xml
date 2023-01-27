@@ -449,7 +449,7 @@ President Ronald Reagon:&lt;/p&gt;
         <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2022/09/10/Java-IO/"/>
         <content type="html">&lt;h1 id=&#34;inputstream&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#inputstream&#34;&gt;#&lt;/a&gt; InputStream&lt;/h1&gt;
 &lt;p&gt;InputStream: 输入流的抽象，提供应用程从内存读取任意字节数（read 指针向后偏移），跳过，标记流位置（标记一个索引位置，reset 后，read 指针会重置为 mark 的值），流剩余字节数的 API。&lt;br /&gt;
-&lt;img data-src=&#34;/Java-IO/5vm3cq.jpg&#34; alt=&#34;data_structure&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://p.ipic.vip/5vm3cq.jpg&#34; alt=&#34;data_structure&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://p.ipic.vip/tb4a77.jpg&#34; alt=&#34;input_stream_class_diagram&#34; /&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;FilterInputStream: 算是装饰者，包装或者聚合了 &lt;code&gt;InputStream&lt;/code&gt; ，使用它作为基本的数据源。覆盖 &lt;code&gt;InputStream&lt;/code&gt;  所有方法，简单的把方法调用转发给 &lt;code&gt;InputStream&lt;/code&gt; 。&lt;/li&gt;
