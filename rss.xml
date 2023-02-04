@@ -827,7 +827,7 @@ The subsequent move and up actions will not be dispatched to the child view any 
             <category term="英语,自学,入门,指南,方法论,词典" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" />
             <pubDate>Wed, 18 Aug 2021 21:23:28 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;题记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题记&#34;&gt;#&lt;/a&gt; 题记&lt;/h1&gt;
-&lt;p&gt;作者个人经验，很多同学投入可观的时间和精力，学习英语，但最后大学毕业，连看英文文档的能力和勇气都没有，功败垂成，这很令人惋惜。本文对此展开深入的分析和解释，从而悟出学习掌握新语言读写听说能力的根本方法和策略，它们很简单，简单到如同每天清晨醒来刷牙洗漱，也不需要占用太多额外的时间。在此分享给大家，读懂原理，然后按部就班跟着做就好了，理论上可以帮助大家早日脱离苦海。&lt;/p&gt;
+&lt;p&gt;笔者个人经验，很多同学投入可观的时间和精力，学习英语，但最后大学毕业，连看英文文档的能力和勇气都没有，功败垂成，这很令人惋惜。本文对此展开深入的分析和解释，从而悟出学习掌握新语言读写听说能力的根本方法和策略，它们很简单，简单到如同每天清晨醒来刷牙洗漱，也不需要占用太多额外的时间。在此分享给大家，读懂原理，然后按部就班跟着做就好了，理论上可以帮助大家早日脱离苦海。&lt;/p&gt;
 &lt;h1 id=&#34;本文要点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本文要点&#34;&gt;#&lt;/a&gt; 本文要点&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;解释很多人十年英语刻苦学习，最后多以失败告终的根源。&lt;/li&gt;
@@ -835,7 +835,7 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;li&gt;阐述成人学习掌握新语言的能力胜于孩童，只是缺乏训练环境。&lt;/li&gt;
 &lt;li&gt;陈述如何搭建个人训练环境并展开有效训练。&lt;/li&gt;
 &lt;li&gt;描述如何降低训练难度，使学习变得舒适自然，无需头悬梁，锥刺股。&lt;/li&gt;
-&lt;li&gt;最后附上词典安装配置和语法书。&lt;/li&gt;
+&lt;li&gt;最后附上词典安装配置步骤和其他学习资源。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;驳斥英语无用论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#驳斥英语无用论&#34;&gt;#&lt;/a&gt; 驳斥英语无用论&lt;/h1&gt;
 &lt;p&gt;有朋友曾经对我说：“我没有需要学英语，阅读英文效率太低，实际也用不到，何不如把有限的时间用在更感兴趣的地方。”&lt;/p&gt;
@@ -886,7 +886,7 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;cos&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;cos&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mtext&gt;∗&lt;/mtext&gt;&lt;mi&gt;cos&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mtext&gt;−&lt;/mtext&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mtext&gt;∗&lt;/mtext&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\cos(A+B) = \cos A∗\cos B −\sin A∗ \sin B
 &lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.76666em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;证毕，其他同理。&lt;/p&gt;
-&lt;p&gt;对于理工科而言，单纯的记忆结果除了提高解题速度，应付考试，是没有多大功用的，因为它很容易遗忘。重要的是理解简化推理论证的过程，或者最原始基本的定义，通过定义和推理关键步骤，整个知识版图都可以顺藤摸瓜探索出来。&lt;/p&gt;
+&lt;p&gt;对于理工科而言，单纯的记忆结果除了提高解题速度，应付考试，是没有多大功用的，因为它很容易遗忘。&lt;strong&gt;这些公式是很抽象模糊的，但当我们图形化，理解推理论证的过程，通过定义和推理关键步骤，和最原始基本的定义关联，抽象的公式变得很具体，整个知识版图都可以顺藤摸瓜探索出来，而且经久不忘&lt;/strong&gt;。&lt;/p&gt;
 &lt;h1 id=&#34;如何记忆单词&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何记忆单词&#34;&gt;#&lt;/a&gt; 如何记忆单词&lt;/h1&gt;
 &lt;p&gt;其实，感觉很多人都懂这些，但为了完整性，还是罗列一下，因为自己本身也不专业，一笔带过吧。&lt;/p&gt;
 &lt;h2 id=&#34;按音节记忆单词&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按音节记忆单词&#34;&gt;#&lt;/a&gt; 按音节记忆单词&lt;/h2&gt;
@@ -970,10 +970,28 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8yNDc1MzAxMS8=&#34;&gt;葛传椝英语写作&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;写作助手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写作助手&#34;&gt;#&lt;/a&gt; 写作助手&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/01/11/d58d4918f960dbca.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-请安装 Grammarly 浏览器扩展插件，或者安装应用程序。简单常见的语法错误可以自动为你高亮并提供修正建议。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果要练习的话，在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93cml0ZWFuZGltcHJvdmUuY29tL3dvcmtib29rcyMvd2ktd29ya2Jvb2tz&#34;&gt; W&amp;amp;I&lt;/span&gt; 选择作文题目，或者实际工作生活中，撰写英文书信文档，可以有几种快捷的途径。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;使用母语撰写好文本，借助&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGVlcGwuY29tL3RyYW5zbGF0b3I=&#34;&gt; DeepL translator&lt;/span&gt; 翻译成目标语言，&lt;br /&gt;
+&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/02/04/7317a21834d87624.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;借助 chatGPT 完成初稿，我在 W&amp;amp;I 挑了 “An email: A friend’s visit”。&lt;br /&gt;
+&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/02/04/f8f2aeabbf7c1ec9.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+chatGPT 没花几秒就写完了。&lt;br /&gt;
+&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/02/04/a214c19e5db7c567.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+再借用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGVlcGwuY29tL3dyaXRl&#34;&gt; DeepL write&lt;/span&gt; 调整。即使如此便捷，但还是需要个人掌握语法和词汇，毕竟机器难免出现错误，需要人工的校验和纠正。这是掌握好英语，特别是为了效率才出此下策，如果要进阶，更好的掌握英语，很不推荐这样的选项，因为它和学习英语的方法背道而驰。前面说过，学习英语得亲自实践，才有可能进步，特别是思考，自己写作的过程就是沉浸在思考。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/01/11/d58d4918f960dbca.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+亲自写作，可以安装 Grammarly 浏览器扩展插件，或者安装应用程序。简单常见的语法错误可以自动为你高亮并提供修正建议。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;其他学习资源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他学习资源&#34;&gt;#&lt;/a&gt; 其他学习资源&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVyaWNhbmVuZ2xpc2guc3RhdGUuZ292L3Jlc291cmNlcw==&#34;&gt;americanenglish&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;听说&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#听说&#34;&gt;#&lt;/a&gt; 听说&lt;/h1&gt;
 &lt;p&gt;使用 podcast 订阅 BBC learning English 等练习听力，YouTube 看英语视频。去参加英语角，平时和朋友聊天用英语说，都是不错的选择，不说也行，只要习惯用英语思考也可以。但，如果读写功底足够扎实，听说其实是水到渠成一般容易。&lt;/p&gt;
+&lt;h1 id=&#34;recap-重点回顾&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#recap-重点回顾&#34;&gt;#&lt;/a&gt; Recap 重点回顾&lt;/h1&gt;
+&lt;p&gt;学习英语最重要的是个人思想上的转变，斯以为自己如果觉得英语不重要，没用，完全很容易半途而废。只有坚信不疑英语有用，重要，特别是可以预见英语对自己的工作生活有积极影响帮助的时候，学习英语的动力自然后劲十足。英语难度由读写听说递增，学习顺序也理应如此，它和我们常说的听说读写南辕北辙。掌握英语得训练，训练的核心是输出，写作和口语表达，特别是其间的思考都应该用英语，切记在思维里先用中文思考，再翻译为英语用口语表达。更不用说平时的阅读了（切记不要翻译为中文在理解文字含义），但输出之前需要有扎实的基础，需要输入的训练，掌握词汇和语法，并做足够的阅读，必须安装使用英英词典，帮你在阅读遇到诸多生词，快速排除障碍。&lt;/p&gt;
 &lt;h1 id=&#34;联系我&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#联系我&#34;&gt;#&lt;/a&gt; 联系我&lt;/h1&gt;
 &lt;p&gt;Email:    &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmxpbXh0b3BAZ21haWwuY29t&#34;&gt;limxtop@gmail.com&lt;/span&gt;&lt;br /&gt;
 Wechat: limxtop&lt;br /&gt;
