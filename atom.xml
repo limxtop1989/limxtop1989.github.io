@@ -65,12 +65,13 @@
 [5] /frameworks/base/core/jni/android_os_MessageQueue.cpp&lt;br /&gt;
 [6] /system/core/libutils/Looper.cpp&lt;/p&gt;
 </content>
+        <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
         <category term="Android, message loop, 消息循环" scheme="https://limxtop1989.github.io/limxtop/tags/Android-message-loop-%E6%B6%88%E6%81%AF%E5%BE%AA%E7%8E%AF/" />
         <updated>2023-02-04T07:59:56.000Z</updated>
     </entry>
     <entry>
         <id>https://limxtop1989.github.io/limxtop/2023/02/04/App-Lock-Architecture/</id>
-        <title>app lock architecture</title>
+        <title>应用锁架构</title>
         <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2023/02/04/App-Lock-Architecture/"/>
         <content type="html">&lt;h1 id=&#34;需求描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需求描述&#34;&gt;#&lt;/a&gt; 需求描述&lt;/h1&gt;
 &lt;p&gt;提供给指定应用加锁机制，应用处于上锁状态时，启动该应用需要做解锁操作，否则不仅用户不能与之交互，其应用界面也不可见，包括在 SystemUI 的 Recent 界面，也不可见其缩略图。&lt;/p&gt;
@@ -635,6 +636,7 @@ For top efficiency, consider wrapping an InputStreamReader within a BufferedRead
 &lt;img data-src=&#34;https://p.ipic.vip/bjqpu6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://p.ipic.vip/4tfurb.jpg&#34; alt=&#34;random_class_diagram&#34; /&gt;&lt;/p&gt;
 </content>
+        <category term="Java" scheme="https://limxtop1989.github.io/limxtop/categories/Java/" />
         <category term="Java, IO, 源码" scheme="https://limxtop1989.github.io/limxtop/tags/Java-IO-%E6%BA%90%E7%A0%81/" />
         <updated>2022-09-10T02:18:36.000Z</updated>
     </entry>
@@ -655,6 +657,7 @@ a cancel event is generated and dispatched to the intercepted child view, in the
 The subsequent move and up actions will not be dispatched to the child view any more.&lt;br /&gt;
 &lt;img data-src=&#34;https://p.ipic.vip/7eocw3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
+        <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
         <category term="Android, Touch Event Dispatch, 触摸事件派发" scheme="https://limxtop1989.github.io/limxtop/tags/Android-Touch-Event-Dispatch-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6%E6%B4%BE%E5%8F%91/" />
         <updated>2022-08-19T14:42:18.000Z</updated>
     </entry>
@@ -723,6 +726,7 @@ The subsequent move and up actions will not be dispatched to the child view any 
 &lt;h1 id=&#34;动画引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#动画引擎&#34;&gt;#&lt;/a&gt; 动画引擎&lt;/h1&gt;
 &lt;p&gt;动画的内部实现使用 Choreographer 提供定时引擎，周期性回调执行上述动画值的计算，实现动画对象从上一个关键帧到下一个关键帧的动画渐变效果。&lt;/p&gt;
 </content>
+        <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
         <category term="Android, Animation, Animator" scheme="https://limxtop1989.github.io/limxtop/tags/Android-Animation-Animator/" />
         <updated>2022-07-24T14:42:18.000Z</updated>
     </entry>
@@ -888,7 +892,7 @@ The subsequent move and up actions will not be dispatched to the child view any 
     </entry>
     <entry>
         <id>https://limxtop1989.github.io/limxtop/2021/08/18/English-introduction/</id>
-        <title>英语自学指南</title>
+        <title>英语自学</title>
         <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2021/08/18/English-introduction/"/>
         <content type="html">&lt;h1 id=&#34;题记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题记&#34;&gt;#&lt;/a&gt; 题记&lt;/h1&gt;
 &lt;p&gt;笔者个人经验，很多同学投入可观的时间和精力，学习英语，但最后大学毕业，连看英文文档的能力和勇气都没有，功败垂成，这很令人惋惜。本文对此展开深入的分析和解释，从而悟出学习掌握新语言读写听说能力的根本方法和策略，它们很简单，简单到如同每天清晨醒来刷牙洗漱，也不需要占用太多额外的时间。在此分享给大家，读懂原理，然后按部就班跟着做就好了，理论上可以帮助大家早日脱离苦海。&lt;/p&gt;
@@ -1079,7 +1083,8 @@ Twitter:  @limxtop&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>
-        <category term="英语,自学,入门,指南,方法论,词典" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" />
+        <category term="Essay" scheme="https://limxtop1989.github.io/limxtop/categories/%E6%9D%82%E8%B0%88/" />
+        <category term="英语自学指南，英语,自学,入门,指南,方法论,词典" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%8B%B1%E8%AF%AD%E8%87%AA%E5%AD%A6%E6%8C%87%E5%8D%97%EF%BC%8C%E8%8B%B1%E8%AF%AD-%E8%87%AA%E5%AD%A6-%E5%85%A5%E9%97%A8-%E6%8C%87%E5%8D%97-%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%8D%E5%85%B8/" />
         <updated>2021-08-18T13:23:28.000Z</updated>
     </entry>
     <entry>
@@ -1135,6 +1140,7 @@ Twitter:  @limxtop&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
+        <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
         <updated>2021-07-17T12:26:30.000Z</updated>
     </entry>
 </feed>
