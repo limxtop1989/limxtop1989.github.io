@@ -871,6 +871,7 @@ The subsequent move and up actions will not be dispatched to the child view any 
             <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2021/09/19/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/</guid>
             <title>ViewModel源码剖析</title>
             <link>https://limxtop1989.github.io/limxtop/2021/09/19/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/</link>
+            <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
             <category term="ViewModel源码剖析, Android, ViewModel" scheme="https://limxtop1989.github.io/limxtop/tags/ViewModel%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90-Android-ViewModel/" />
             <pubDate>Sun, 19 Sep 2021 18:44:37 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;viewmodel-源码剖析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#viewmodel-源码剖析&#34;&gt;#&lt;/a&gt; ViewModel 源码剖析&lt;/h1&gt;
