@@ -7,6 +7,16 @@
     "home_page_url": "https://limxtop1989.github.io/limxtop",
     "items": [
         {
+            "id": "https://limxtop1989.github.io/limxtop/2023/02/25/notice-time/",
+            "url": "https://limxtop1989.github.io/limxtop/2023/02/25/notice-time/",
+            "title": "看见时间",
+            "date_published": "2023-02-25T03:53:23.000Z",
+            "content_html": "<p>因缘巧合，在毕业两年多后的一趟公交车外，我看见了时间，明白了它到底是何物。</p>\n<p>那个上班等车的清晨，姗姗来迟的公交车未来得及靠站，一群候车的上班族便蜂拥而上，我没有参与，从容闲适地徘徊在候车亭等待下一班车的到来。心急火燎的人群几经努力尝试终有些人挤不上车，放弃撤退回来。不过，车子启动扬起的尘埃还未落定，下一班车就空荡荡地尾随而来，遗憾留下来的人愁眉渐次舒展开来。</p>\n<p>我知道，有些公司会规定迟到要扣钱，但即使没有这样的规矩，我依然能够理解他们挤着上车的举动。当前门空间被拥挤的人群塞得满满当当，司机总是奉劝还在门外挣扎的人，等下一班，很快就来。这是他们这个职业所能留给乘客一丝无奈的善意。</p>\n<p>我们有序上车，由于并非满载行驶，车子极其轻快，一下子就超车了。当我到站走下车回头一望时，上一趟公交车还在远处姗姗来迟。如果我刚才也随波逐流在人群中推搡上车，那我只能在此时此刻之后的几分钟的未来才能到达此地。也就是一个性格使然看似不经意间的选择，我提前到达了未来（本来应该是  <code>t2</code> ，结果是 <code>t1</code>  到达）。</p>\n<p><img data-src=\"https://s3.bmp.ovh/imgs/2023/02/25/14b5f2ba338fbc0d.png\" alt=\"\" /></p>\n<p>那一刻，我仿佛看见了时间，滴答滴答，在自己生命场合里，刻下的尺度。我们的人生只有一次，没有彩排，没办法走到某一刻，有个旋钮可以把我们倒拨回过去，重新作出选择，对比看孰好孰坏。但只要自己不要碌碌无为，虚度光阴，贪图玩乐，像个母亲细心地呵护呱呱坠地的婴孩一样爱护自己的时间，这样自己就可以提前到达未来。在人生有限的生命里，自己可以走的更远，这样也许自己不惑之年所驻足的地方，却是曾经懵懂的自己或者他人活到耄耋之年才能到达。</p>\n<p>人有了点学识，方知自己过去的无知，也许因为意识到这点，便孜孜不倦地求知。学海无涯，回头不是岸，努力游到对岸才是。</p>\n<blockquote>\n<p>“人永远都无法知道自己该要什么，因为人只能活一次，既不能拿它跟前世相比，也不能在来生加以修正。没有任何方法可以检验哪种抉择是好的，因为不存在任何比较。一切都是马上经历，仅此一次，不能准备。—— 米兰・昆德拉”</p>\n</blockquote>\n<p>很不幸，和大多数大道理都懂，小情绪却总是喷薄而出的小孩脾气一样。知道时间珍贵，应该珍惜时间，那些人生至关重要的清规戒律时常淹没在日常琐碎繁杂的洪流里，知行合一是如此之难。</p>\n<p>但其实也没有必要对此太过于介怀。有道是人生苦短，及时行乐。没有必要一直如同苦行僧，偶尔需要些许闲暇的时光，让自己走出家门坐在双层巴士上发呆，看着街边的房屋，树叶如白驹过隙般从车窗前一晃而过。和朋友踩在松软的沙滩或者硬实的木栈道，任凭裹挟着咸味的海风涌入鼻腔，或者坐在自己宽大的书桌前摊开百读不厌，看似百无一用的课外书籍。接受偶尔不那么功利目的，虚度光阴的自己。</p>\n",
+            "tags": [
+                "时间, time"
+            ]
+        },
+        {
             "id": "https://limxtop1989.github.io/limxtop/2023/02/04/android-message-loop/",
             "url": "https://limxtop1989.github.io/limxtop/2023/02/04/android-message-loop/",
             "title": "Android消息循环",
@@ -190,16 +200,6 @@
             "tags": [
                 "Essay",
                 "英语自学指南，英语,自学,入门,指南,方法论,词典"
-            ]
-        },
-        {
-            "id": "https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/",
-            "url": "https://limxtop1989.github.io/limxtop/2021/07/17/activity-transfer-detection/",
-            "title": "Android Activity 转移类型检测",
-            "date_published": "2021-07-17T12:26:30.000Z",
-            "content_html": "<p>Requirement:：</p>\n<p>应用内有些 Activity 数据敏感，需要区别对待，这里需要识别首次进入红色 Activity 集合内，在红色 Activity 集合内跳转，和跳出红色 Activity 集合三种情况。【当红色 Activity 集合是应用内的 Activity 集合时，就相当于首次进入应用，应用内界面跳转和退出应用的判定】</p>\n<p><a href=\"https://imgtu.com/i/W1aZWR\"><img data-src=\"https://z3.ax1x.com/2021/07/17/W1aZWR.png\" alt=\"W1aZWR.png\" /></a></p>\n<p>算法描述：</p>\n<ol>\n<li>\n<p>定义一个保存 Activity Simple Name 的集合。</p>\n</li>\n<li>\n<p>Activity onResume 时，将此 Activity Simple Name 加入集合。</p>\n</li>\n<li>\n<ol>\n<li>当集合元素个数等于<strong> 1</strong> 时，为首次进入该应用打开的第一个 Activity。</li>\n<li>当集合元素个数等于<strong> 2</strong> 时，表示打开应用内的其他 Activity。</li>\n</ol>\n</li>\n<li>\n<p>Activity onStop 时，将此 Activity Simple Name 移出集合。</p>\n</li>\n<li>\n<ol>\n<li>当集合元素个数为<strong> 1</strong> 时，表示在应用内跳转。</li>\n<li>当集合元素个数为<strong> 0</strong> 时，表示打开其他应用。</li>\n</ol>\n</li>\n</ol>\n<p>原理：</p>\n<p><a href=\"https://imgtu.com/i/W1aVY9\"><img data-src=\"https://z3.ax1x.com/2021/07/17/W1aVY9.png\" alt=\"W1aVY9.png\" /></a></p>\n<p>由上图可知，Activity A 启动 Activity B 时，执行顺序是 Activity A's onPause () -&gt; Activity B's onResume () -&gt; Activity A's onStop ()。应用内的 Activity 在执行 onResume () &amp; onStop () 时，我们规约将其 Activity Simple Name 加入 &amp; 移出集合，而启动应用外的 Activity 我们没有能力如此操作。</p>\n<ol>\n<li>首次进入 Activity 集合，应用内的 Activity onResume 被调用；</li>\n<li>在 Activity 集合间跳转，应用内的 Activity onResume &amp; onStop 被调用；</li>\n<li>跳出 Activity 集合，应用内的 Activity onStop 被调用；</li>\n</ol>\n<p>所以，启动应用内还是应用外的 Activity 在此产生差异，而差异让程序识别成为可能。</p>\n<ol>\n<li>\n<p>当 Activity B 是<strong>应用内 Activity</strong> 时，集合内元素个数变迁如下：</p>\n<p>Activity A's onPause() -&gt; Activity B's onResume() -&gt; Activity A's onStop()</p>\n<p><strong>1</strong>（Activity A）         <strong>2</strong>（Activity A&amp;B）        <strong>1</strong>（Activity B）</p>\n</li>\n<li>\n<p>当 Activity B 是<strong>应用外 Activity</strong> 时，集合内元素个数变迁如下：</p>\n<p>Activity A's onPause() -&gt; Activity B's onResume() -&gt; Activity A's onStop()</p>\n<p><strong>1</strong>（Activity A）         <strong>1</strong>（Activity A）              <strong>0</strong>（）</p>\n</li>\n</ol>\n",
-            "tags": [
-                "Android"
             ]
         }
     ]
