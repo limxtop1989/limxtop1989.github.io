@@ -14,9 +14,9 @@
         <lastBuildDate>Sun, 06 Aug 2023 23:10:48 +0800</lastBuildDate>
         <category term="Android" />
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/AndroidX-migrate/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/08/06/AndroidX-migrate/</guid>
             <title>穿山甲集成报错</title>
-            <link>https://limxtop1989.github.io/limxtop/AndroidX-migrate/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/08/06/AndroidX-migrate/</link>
             <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
             <category term="穿山甲, 集成报错，AndroidX migrate，FileProvider not found" scheme="https://limxtop1989.github.io/limxtop/tags/%E7%A9%BF%E5%B1%B1%E7%94%B2-%E9%9B%86%E6%88%90%E6%8A%A5%E9%94%99%EF%BC%8CAndroidX-migrate%EF%BC%8CFileProvider-not-found/" />
             <pubDate>Sun, 06 Aug 2023 23:10:48 +0800</pubDate>
@@ -110,9 +110,9 @@ The Android plugin automatically migrates existing third-party libraries to use 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/RxJava-Schedule/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/07/30/RxJava-Schedule/</guid>
             <title>RxJava Schedule</title>
-            <link>https://limxtop1989.github.io/limxtop/RxJava-Schedule/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/07/30/RxJava-Schedule/</link>
             <category term="RxJava, 线程切换" scheme="https://limxtop1989.github.io/limxtop/tags/RxJava-%E7%BA%BF%E7%A8%8B%E5%88%87%E6%8D%A2/" />
             <pubDate>Sun, 30 Jul 2023 17:08:48 +0800</pubDate>
             <description><![CDATA[ &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Observable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Observable&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;OnSubscribe&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Subscriber&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;super&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; observer&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;observer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;isUnsubscribed&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    observer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onNext&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                observer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onCompleted&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            observer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onError&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Subscriber&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onNext&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt; item&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Next: &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; item&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onError&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Throwable&lt;/span&gt; error&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;err&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Error: &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; error&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onCompleted&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Sequence complete.&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;Running result:&lt;/p&gt;
@@ -274,9 +274,9 @@ public final class ObservableSubscribeOn&amp;lt;T&amp;gt; extends AbstractObserv
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/AbstractQueuedSynchronizer/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/07/30/AbstractQueuedSynchronizer/</guid>
             <title>Java 并发框架 AbstractQueuedSynchronizer</title>
-            <link>https://limxtop1989.github.io/limxtop/AbstractQueuedSynchronizer/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/07/30/AbstractQueuedSynchronizer/</link>
             <category term="Java" scheme="https://limxtop1989.github.io/limxtop/categories/Java/" />
             <pubDate>Sun, 30 Jul 2023 08:58:02 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://s3.uuu.ovh/imgs/2023/07/30/84de061a940ab561.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
@@ -332,9 +332,9 @@ public final class ObservableSubscribeOn&amp;lt;T&amp;gt; extends AbstractObserv
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;span&gt;a java.util.concurrent.locks.AbstractQueuedSynchronizer#acquireQueued&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * Acquires in exclusive uninterruptible mode for thread already in&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * queue. Used by condition wait methods as well as acquire.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param node the node&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param arg the acquire argument&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @return &amp;#123;@code true&amp;#125; if interrupted while waiting&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;acquireQueued&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Node&lt;/span&gt; node&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; arg&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; failed &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; interrupted &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Node&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; node&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;predecessor&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;p &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; head &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tryAcquire&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;arg&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token function&#34;&gt;setHead&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;node&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                p&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;next &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// help GC&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                failed &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; interrupted&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;shouldParkAfterFailedAcquire&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; node&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token function&#34;&gt;parkAndCheckInterrupt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                interrupted &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;failed&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token function&#34;&gt;cancelAcquire&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;node&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/semaphore/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/07/29/semaphore/</guid>
             <title>Semaphore</title>
-            <link>https://limxtop1989.github.io/limxtop/semaphore/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/07/29/semaphore/</link>
             <category term="semaphore，java 并发，信号量" scheme="https://limxtop1989.github.io/limxtop/tags/semaphore%EF%BC%8Cjava-%E5%B9%B6%E5%8F%91%EF%BC%8C%E4%BF%A1%E5%8F%B7%E9%87%8F/" />
             <pubDate>Sat, 29 Jul 2023 17:03:58 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;计数方式实现的旗语，一个旗语维护一组概念上的许可。每个线程 acquire 都会在必要时阻塞，直到有许可证可用，然后获取它，许可数量减一。每次释放都会增加一个许可，从而有可能释放阻塞在 acquire 的线程。不过， Semaphore 并不使用实际的许可对象；它只是对可用数量进行计数，并采取相应的行动。&lt;/p&gt;
@@ -354,9 +354,9 @@ Semaphores are often used to restrict the number of threads than can access some
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/CountDownLatch/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/07/29/CountDownLatch/</guid>
             <title>CountDownLatch</title>
-            <link>https://limxtop1989.github.io/limxtop/CountDownLatch/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/07/29/CountDownLatch/</link>
             <category term="Java" scheme="https://limxtop1989.github.io/limxtop/categories/Java/" />
             <category term="CountDownLatch, 并发，多线程" scheme="https://limxtop1989.github.io/limxtop/tags/CountDownLatch-%E5%B9%B6%E5%8F%91%EF%BC%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B/" />
             <pubDate>Sat, 29 Jul 2023 15:30:00 +0800</pubDate>
@@ -388,9 +388,9 @@ WorkerThread 初始化启动后， 在  &lt;code&gt;startSignal.await();&lt;/cod
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/thread-pool/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/07/27/thread-pool/</guid>
             <title>线程池</title>
-            <link>https://limxtop1989.github.io/limxtop/thread-pool/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/07/27/thread-pool/</link>
             <category term="Java" scheme="https://limxtop1989.github.io/limxtop/categories/Java/" />
             <category term="Thread Pool，线程池" scheme="https://limxtop1989.github.io/limxtop/tags/Thread-Pool%EF%BC%8C%E7%BA%BF%E7%A8%8B%E6%B1%A0/" />
             <pubDate>Thu, 27 Jul 2023 23:10:17 +0800</pubDate>
@@ -452,9 +452,9 @@ By default, even core threads are initially created and started only when new ta
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;span&gt;a java.util.concurrent.ThreadPoolExecutor#addWorker&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;addWorker&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Runnable&lt;/span&gt; firstTask&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; core&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; wc &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;workerCountOf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;wc &lt;span class=&#34;token operator&#34;&gt;&gt;=&lt;/span&gt; CAPACITY &lt;span class=&#34;token operator&#34;&gt;||&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        wc &lt;span class=&#34;token operator&#34;&gt;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;core &lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; corePoolSize &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; maximumPoolSize&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/Representing-and-Manipulating-Information/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/07/08/Representing-and-Manipulating-Information/</guid>
             <title>数字在计算机的表示和操作</title>
-            <link>https://limxtop1989.github.io/limxtop/Representing-and-Manipulating-Information/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/07/08/Representing-and-Manipulating-Information/</link>
             <pubDate>Sat, 08 Jul 2023 14:51:22 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;integer-representations&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#integer-representations&#34;&gt;#&lt;/a&gt; Integer Representations&lt;/h1&gt;
 &lt;p&gt;在学校教科书告诉我们原码，反码，补码的规则来计算正负数在计算机的表示。&lt;/p&gt;
@@ -769,9 +769,9 @@ b = b_mb_{m-1}...b_1b_0.b_{-1}...b_{-n} = \sum_{i=-n}^mi^i * b_i
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/word-card-user-manual/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/05/07/word-card-user-manual/</guid>
             <title>Android 单词卡片使用手册</title>
-            <link>https://limxtop1989.github.io/limxtop/word-card-user-manual/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/05/07/word-card-user-manual/</link>
             <category term="单词卡片, word card" scheme="https://limxtop1989.github.io/limxtop/tags/%E5%8D%95%E8%AF%8D%E5%8D%A1%E7%89%87-word-card/" />
             <pubDate>Sun, 07 May 2023 16:05:05 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目录&#34;&gt;#&lt;/a&gt; 目录&lt;/h1&gt;
@@ -883,9 +883,9 @@ a flat container with low sides, for serving food from or cooking food in ⇨ bo
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/canvas-graphic-transform/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/03/11/canvas-graphic-transform/</guid>
             <title>Android 双指触控 位移 缩放 旋转</title>
-            <link>https://limxtop1989.github.io/limxtop/canvas-graphic-transform/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/03/11/canvas-graphic-transform/</link>
             <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
             <category term="Android Translate Scale Rotate, multiple touch event, Android 双指触控，位移，缩放，旋转" scheme="https://limxtop1989.github.io/limxtop/tags/Android-Translate-Scale-Rotate-multiple-touch-event-Android-%E5%8F%8C%E6%8C%87%E8%A7%A6%E6%8E%A7%EF%BC%8C%E4%BD%8D%E7%A7%BB%EF%BC%8C%E7%BC%A9%E6%94%BE%EF%BC%8C%E6%97%8B%E8%BD%AC/" />
             <pubDate>Sat, 11 Mar 2023 21:13:48 +0800</pubDate>
@@ -1040,9 +1040,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/notice-time/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/02/25/notice-time/</guid>
             <title>看见时间</title>
-            <link>https://limxtop1989.github.io/limxtop/notice-time/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/02/25/notice-time/</link>
             <category term="时间, time" scheme="https://limxtop1989.github.io/limxtop/tags/%E6%97%B6%E9%97%B4-time/" />
             <pubDate>Sat, 25 Feb 2023 11:53:23 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;因缘巧合，在毕业两年多后的一趟公交车外，我看见了时间，明白了它到底是何物。&lt;/p&gt;
@@ -1060,9 +1060,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/android-message-loop/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/02/04/android-message-loop/</guid>
             <title>Android消息循环</title>
-            <link>https://limxtop1989.github.io/limxtop/android-message-loop/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/02/04/android-message-loop/</link>
             <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
             <category term="Android, message loop, 消息循环" scheme="https://limxtop1989.github.io/limxtop/tags/Android-message-loop-%E6%B6%88%E6%81%AF%E5%BE%AA%E7%8E%AF/" />
             <pubDate>Sat, 04 Feb 2023 15:59:56 +0800</pubDate>
@@ -1119,9 +1119,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/App-Lock-Architecture/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/02/04/App-Lock-Architecture/</guid>
             <title>应用锁架构</title>
-            <link>https://limxtop1989.github.io/limxtop/App-Lock-Architecture/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/02/04/App-Lock-Architecture/</link>
             <category term="App Lock, AMS, ActivityManagerService, 应用锁, 应用锁架构" scheme="https://limxtop1989.github.io/limxtop/tags/App-Lock-AMS-ActivityManagerService-%E5%BA%94%E7%94%A8%E9%94%81-%E5%BA%94%E7%94%A8%E9%94%81%E6%9E%B6%E6%9E%84/" />
             <pubDate>Sat, 04 Feb 2023 13:05:02 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;需求描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需求描述&#34;&gt;#&lt;/a&gt; 需求描述&lt;/h1&gt;
@@ -1146,9 +1146,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/sunset/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/01/08/sunset/</guid>
             <title>晚霞</title>
-            <link>https://limxtop1989.github.io/limxtop/sunset/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/01/08/sunset/</link>
             <category term="晚霞" scheme="https://limxtop1989.github.io/limxtop/tags/%E6%99%9A%E9%9C%9E/" />
             <pubDate>Sun, 08 Jan 2023 12:01:26 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://p.ipic.vip/rvdkpt.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -1175,9 +1175,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/azhen/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2023/01/08/azhen/</guid>
             <title>阿珍</title>
-            <link>https://limxtop1989.github.io/limxtop/azhen/</link>
+            <link>https://limxtop1989.github.io/limxtop/2023/01/08/azhen/</link>
             <category term="阿珍" scheme="https://limxtop1989.github.io/limxtop/tags/%E9%98%BF%E7%8F%8D/" />
             <pubDate>Sun, 08 Jan 2023 11:53:54 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://p.ipic.vip/pao9qx.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -1195,9 +1195,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/next-pole/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2022/12/23/next-pole/</guid>
             <title>下一棒</title>
-            <link>https://limxtop1989.github.io/limxtop/next-pole/</link>
+            <link>https://limxtop1989.github.io/limxtop/2022/12/23/next-pole/</link>
             <pubDate>Fri, 23 Dec 2022 22:24:25 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Author: 叨址 (沈超）&lt;br /&gt;
 WechatID: abelkid&lt;/p&gt;
@@ -1259,9 +1259,9 @@ WechatID: abelkid&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/how-to-make-money/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2022/10/19/how-to-make-money/</guid>
             <title>如何赚大钱</title>
-            <link>https://limxtop1989.github.io/limxtop/how-to-make-money/</link>
+            <link>https://limxtop1989.github.io/limxtop/2022/10/19/how-to-make-money/</link>
             <category term="财富，赚钱" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%B4%A2%E5%AF%8C%EF%BC%8C%E8%B5%9A%E9%92%B1/" />
             <pubDate>Wed, 19 Oct 2022 22:53:22 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;题记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题记&#34;&gt;#&lt;/a&gt; 题记&lt;/h1&gt;
@@ -1359,9 +1359,9 @@ WechatID: abelkid&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/when-I-was-young/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2022/09/10/when-I-was-young/</guid>
             <title>钱很重要么？</title>
-            <link>https://limxtop1989.github.io/limxtop/when-I-was-young/</link>
+            <link>https://limxtop1989.github.io/limxtop/2022/09/10/when-I-was-young/</link>
             <category term="钱，年轻" scheme="https://limxtop1989.github.io/limxtop/tags/%E9%92%B1%EF%BC%8C%E5%B9%B4%E8%BD%BB/" />
             <pubDate>Sat, 10 Sep 2022 19:41:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;年轻的时候，总以为钱很重要。&lt;br /&gt;
@@ -1371,9 +1371,9 @@ WechatID: abelkid&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/Java-IO/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2022/09/10/Java-IO/</guid>
             <title>Java IO</title>
-            <link>https://limxtop1989.github.io/limxtop/Java-IO/</link>
+            <link>https://limxtop1989.github.io/limxtop/2022/09/10/Java-IO/</link>
             <category term="Java" scheme="https://limxtop1989.github.io/limxtop/categories/Java/" />
             <category term="Java, IO, 源码" scheme="https://limxtop1989.github.io/limxtop/tags/Java-IO-%E6%BA%90%E7%A0%81/" />
             <pubDate>Sat, 10 Sep 2022 10:18:36 +0800</pubDate>
@@ -1473,9 +1473,9 @@ For top efficiency, consider wrapping an InputStreamReader within a BufferedRead
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/android-touch-event/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2022/08/19/android-touch-event/</guid>
             <title>Android 触摸事件派发</title>
-            <link>https://limxtop1989.github.io/limxtop/android-touch-event/</link>
+            <link>https://limxtop1989.github.io/limxtop/2022/08/19/android-touch-event/</link>
             <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
             <category term="Android, Touch Event Dispatch, 触摸事件派发" scheme="https://limxtop1989.github.io/limxtop/tags/Android-Touch-Event-Dispatch-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6%E6%B4%BE%E5%8F%91/" />
             <pubDate>Fri, 19 Aug 2022 22:42:18 +0800</pubDate>
@@ -1494,9 +1494,9 @@ The subsequent move and up actions will not be dispatched to the child view any 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/Android-animation-principles/</guid>
+            <guid isPermalink="true">https://limxtop1989.github.io/limxtop/2022/07/24/Android-animation-principles/</guid>
             <title>Android 动画原理</title>
-            <link>https://limxtop1989.github.io/limxtop/Android-animation-principles/</link>
+            <link>https://limxtop1989.github.io/limxtop/2022/07/24/Android-animation-principles/</link>
             <category term="Android" scheme="https://limxtop1989.github.io/limxtop/categories/android/" />
             <category term="Android, Animation, Animator" scheme="https://limxtop1989.github.io/limxtop/tags/Android-Animation-Animator/" />
             <pubDate>Sun, 24 Jul 2022 22:42:18 +0800</pubDate>
