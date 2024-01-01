@@ -8,8 +8,68 @@
     <author>
       <name>文理兼修电脑首席</name>
     </author>
-    <updated>2023-11-11T12:22:52.000Z</updated>
+    <updated>2024-01-01T13:55:00.000Z</updated>
     <category term="Android" />
+    <entry>
+        <id>https://limxtop1989.github.io/limxtop/2024/01/01/Privacy-Policy/</id>
+        <title>Privacy Policy</title>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2024/01/01/Privacy-Policy/"/>
+        <content type="html">&lt;p&gt;Last updated: January 01, 2024&lt;/p&gt;
+&lt;p&gt;Flashcard app request access to the following data and only for the purposes stated in the following list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Device internal or external storage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Required to download and move the dictionary files, which will be accessed by GoldenDict, in Downloads or user-specified folders. No other data is accessed. No content found on the device is ever transmitted over the network.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User interaction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Information about how a user interacts with Flashcard app. For example, the action of user clicking download button and the action result, which will be used to analyze whether the app works fine. The information is collected by Google Analysis SDK, which obeys General Data Protection Regulation (GDPR). Please refer to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vYW5hbHl0aWNzL2Fuc3dlci82MDA0MjQ1P2hsPWVuJmFtcDt2aXNpdF9pZD02MzgzOTUyMjUyODkxNTU5MjYtMjgxNTM4MzI0MSZhbXA7cmQ9MSN6aXBweT0lMkNvdXItcHJpdmFjeS1wb2xpY3klMkNkYXRhLWNvbGxlY3RlZC1ieS1nb29nbGUtYW5hbHl0aWNzJTJDZGF0YS1jb250cm9scy1mb3ItcmV0ZW50aW9uLWRlbGV0aW9uLWFuZC1wb3J0YWJpbGl0eQ==&#34;&gt;safeguarding your data&lt;/span&gt; for further information.&lt;/p&gt;
+&lt;p&gt;We use the data to provide and improve the service. By using the service, You agree to the collection and use of information in accordance with this Privacy Policy.&lt;/p&gt;
+&lt;h1 id=&#34;contact-us&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#contact-us&#34;&gt;#&lt;/a&gt; Contact Us&lt;/h1&gt;
+&lt;p&gt;If you have any questions about this Privacy Policy, You can contact us:&lt;/p&gt;
+&lt;p&gt;By email: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmxpbXh0b3BAZ21haWwuY29t&#34;&gt;limxtop@gmail.com&lt;/span&gt;&lt;/p&gt;
+</content>
+        <updated>2024-01-01T13:55:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://limxtop1989.github.io/limxtop/2023/12/30/new-class/</id>
+        <title>new class</title>
+        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2023/12/30/new-class/"/>
+        <content type="html">&lt;pre&gt;&lt;code&gt;javac -d bin src/leetcode/limxtop/com/ClassLoadDemo.java
+java -cp bin com/maxim/wordcard/utils/ClassLoadDemo
+
+miaoxins-mbp-2:java miaoxinli$ tree
+.
+├── bin
+│   ├── com
+│   │   └── maxim
+│   │       └── wordcard
+│   │           └── utils
+│   │               └── ClassLoadDemo.class
+│   └── leetcode
+│       └── limxtop
+│           └── com
+│               ├── Divide2.class
+│               └── TwoSum.class
+└── src
+    └── leetcode
+        └── limxtop
+            └── com
+                ├── ClassLoadDemo.java
+                ├── Divide2.class
+                ├── Divide2.java
+                ├── PreOrderTraversal.java
+                ├── ThreadOrder.java
+                ├── ThredOrder$1.class
+                ├── ThredOrder$2.class
+                ├── ThredOrder$3.class
+                ├── ThredOrder.class
+                ├── TwoSum.class
+                └── TwoSum.java
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <updated>2023-12-30T06:49:54.000Z</updated>
+    </entry>
     <entry>
         <id>https://limxtop1989.github.io/limxtop/2023/11/11/Google-Play-Store-In-App-Billing/</id>
         <title>Google Play Store In App Billing Issue</title>
@@ -25,11 +85,11 @@
 &lt;li&gt;Add the tester&#39;s mailbox, which is the Google account login to the device to test the app SKU.&lt;/li&gt;
 &lt;li&gt;Switch License Respond to LICENSED (Path: play console homepage -&amp;gt; Setup -&amp;gt; License testing).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Note:&lt;/p&gt;
-&lt;ol&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;The Application ID for uploading Closing Testing needs to be the same as the Application ID for local debugging.&lt;/li&gt;
 &lt;li&gt;Copy the link in the &amp;quot;Testers&amp;quot; tab, send it to testers to invite them join the test.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;3-billing-unavailable&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-billing-unavailable&#34;&gt;#&lt;/a&gt; 3 Billing Unavailable&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;TrivialDrive:BillingDataSource: onSkuDetailsResponse: 3 Billing Unavailable&lt;/p&gt;
@@ -1457,7 +1517,7 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
         <id>https://limxtop1989.github.io/limxtop/2023/01/08/sunset/</id>
         <title>晚霞</title>
         <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2023/01/08/sunset/"/>
-        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://p.ipic.vip/rvdkpt.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s3.uuu.ovh/imgs/2023/12/11/632a2a295ccdc95a.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;作者：火山&lt;br /&gt;
 公众号：火山与木星&lt;br /&gt;
 原文链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvYUlNYnFxSGRNbUpsM3FsbWdwTUYzQQ==&#34;&gt;https://mp.weixin.qq.com/s/aIMbqqHdMmJl3qlmgpMF3A&lt;/span&gt;&lt;/p&gt;
@@ -1486,7 +1546,7 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
         <id>https://limxtop1989.github.io/limxtop/2023/01/08/azhen/</id>
         <title>阿珍</title>
         <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2023/01/08/azhen/"/>
-        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://p.ipic.vip/pao9qx.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s3.uuu.ovh/imgs/2023/12/11/ccc6a7dd9894f5f3.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;作者：火山&lt;br /&gt;
 公众号：火山与木星&lt;br /&gt;
 原文链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvVmdmTGdnbEF2aTJVWWNMNnczNkpldw==&#34;&gt;https://mp.weixin.qq.com/s/VgfLgglAvi2UYcL6w36Jew&lt;/span&gt;&lt;/p&gt;
@@ -1565,117 +1625,5 @@ WechatID: abelkid&lt;/p&gt;
 &lt;p&gt;波米：你要把棒扔了，那肯定就没有下一棒，永远是一个未竟事业。&lt;/p&gt;
 </content>
         <updated>2022-12-23T14:24:25.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://limxtop1989.github.io/limxtop/2022/10/19/how-to-make-money/</id>
-        <title>如何赚大钱</title>
-        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2022/10/19/how-to-make-money/"/>
-        <content type="html">&lt;h1 id=&#34;题记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题记&#34;&gt;#&lt;/a&gt; 题记&lt;/h1&gt;
-&lt;p&gt;创造财富是致富的一种直接的方式。（Creating wealth is a way to get rich.）而财富，是你身上拥有，且别人需要的东西。&lt;/p&gt;
-&lt;h1 id=&#34;最佳途径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最佳途径&#34;&gt;#&lt;/a&gt; 最佳途径&lt;/h1&gt;
-&lt;p&gt;如果想变得富有，最好的方式是创立或者加盟初创科技公司，特别是攻克技术难题的公司。这是一种几百年来，屡试不爽可靠的致富方式。&lt;/p&gt;
-&lt;h1 id=&#34;打工人的职业选择&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#打工人的职业选择&#34;&gt;#&lt;/a&gt; 打工人的职业选择&lt;/h1&gt;
-&lt;p&gt;经济上来看，初创公司相当于将全部的职业生涯压缩为短短的几年时间完成，而不是低强度的四十年，在这几年的时间里，你尽可能努力地工作。这可以通过让自己加倍努力工作达成，加班是一种方式，但不是唯一和优雅的方式。每天在办公室会有诸多工作事项，但并非他们都可以转化为同等的价值。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;有些工作并不能创造价值，或者收获甚微，比如因为公司的规则，不得不和同事做毫无意义的争论，或者撰写冗长的工作日报。特别是对那些日报没有洋洋洒洒上千字会被认为没有营养和内容的公司，请敬而远之。由此当我们考虑工作时间的时候，应该衡量的是有效工作时间，并将其最大化，而不是简单的考量工作时长。&lt;/li&gt;
-&lt;li&gt;不同的工作，创造的价值不一样，花一年的时间搬砖砌墙，和花三年五载的漫长岁月，构思图灵机模型为世界从工业革命走向信息革命奠定基础，完全不能相提并论。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;财富&lt;/mtext&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mtext&gt;有效工作时长&lt;/mtext&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mtext&gt;单位时间创造的财富&lt;/mtext&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;财富 = 有效工作时长 * 单位时间创造的财富
-&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;财&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;富&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;有&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;效&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;工&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;作&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;时&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;长&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;单&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;位&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;时&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;间&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;创&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;造&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;的&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;财&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;富&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;综上，当我们提高任何一个变量，都可以让财富增长。&lt;/p&gt;
-&lt;h1 id=&#34;复利效应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#复利效应&#34;&gt;#&lt;/a&gt; 复利效应&lt;/h1&gt;
-&lt;p&gt;今天的工作内容可以积累，为日后的工作做铺垫或者打基础，而不应该像一次性筷子，用过之后就丢弃，明天是全新的开始，新的轮回。这样每天进步一点点，假以时日，未来可期。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;0.01&lt;/mn&gt;&lt;msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mn&gt;365&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;37.783&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt; (1 + 0.01)^{365} = 37.783
-&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.1141079999999999em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8641079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.113em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;规模效应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#规模效应&#34;&gt;#&lt;/a&gt; 规模效应&lt;/h1&gt;
-&lt;p&gt;一份投资 100 块，利润率是 10%，利润所得是 10，当投资规模扩大为 10 万，利润率几本是保持不变的，此时利润所得便是 1 万。当应用软件的单条广告收入甚微，甚至可以忽略不计，但当用户数成千上万过亿，相乘一下，依然收入不菲。&lt;/p&gt;
-&lt;h1 id=&#34;打工人的技能发展选择&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#打工人的技能发展选择&#34;&gt;#&lt;/a&gt; 打工人的技能发展选择&lt;/h1&gt;
-&lt;p&gt;如若要获得更高的个人劳动报酬，可以掌握少数人掌握的技能，或者市场大量需要的技能，不管哪一种，都可以促成劳动力供给少于需求的局面，让自己变得稀缺，从而自然而然获得更高的报酬。如果可以兼而有之，则更好。工资是企业支付你的劳动技能的价格，其高低取决于技能是否稀缺。一旦技能稀缺，需要此技能的企业过多，企业只能提高支付价格以获取人才。无法提供更高价格的企业最后只能和人才失之交臂。如果还不大明白，请看下方经济学的供需理论。&lt;/p&gt;
-&lt;p&gt;假设市场需要十个工人，工资是 100 每天，但市场上有 12 个工人，此时有两个工人必然面临失业，于是，他们只能降低收入期望，比如 80 每天，由于用人成本总体下降，从而吸引提供更低薪酬的用人单位进入市场招聘。劳动力供过于求如此，供给不足则反过来。&lt;/p&gt;
-&lt;p&gt;需求指的是人们有能力购买，并愿意购买某个具体财货的欲望。显示的是其它因素不变的情况下（ceteris paribus），随着价格升降，某个体在每段时间内所愿意购买某财货的数量。&lt;/p&gt;
-&lt;p&gt;在某一价格下，消费者愿意购买的某一货物总数量称为 “需求量”(quantity demanded)。在不同价格下，需求量会不同。需求也就是说价格与需求量的关系。若以图像表示，便称为 “需求曲线”。&lt;/p&gt;
-&lt;p&gt;供给，指特定市场上在一定时期内，与每一销售价格相对应，生产者愿意且能供应的财货数量。但供给并不完全代表生产，它属于生产的一部分，但供给量并不即是生产者在计算一系列成本所愿意生产的数量。生产量依据利润最大化条件决定，它在短期往往是固定，但供给量则可以随时变动。也就是说生产量是虚拟的、是人们算出来的，而供给量是现实的、真实发生的量。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;img data-src=&#34;https://p.ipic.vip/bmbd03.jpg&#34; alt=&#34;&#34; /&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;em&gt;标准的供给和需求模型：正斜率的是供给曲线，代表生产者愿意在某一价格水平下出售的物品数量；负斜率的是需求曲线，代表消费者愿意在某一价格水准下购买的数量。透过模型的分析，可发现两条曲线相交之处（均衡点）就是均衡价格和均衡产量。&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;供求关系决定市场价格。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;供给稀缺不能满足有效需求，需求方不愿意得不到商品，愿支付更高的价格。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;img data-src=&#34;https://p.ipic.vip/jcqd1h.jpg&#34; alt=&#34;&#34; /&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;em&gt;供给是蓝线 S，需求是红线 D，当需求由 D1 变动为 D2 时，成交的价格和数量也随之变动。&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;供给充裕超过有效需求，商品不能全部出售，势必导致供给方降低价格增加有效需求。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;img data-src=&#34;https://p.ipic.vip/qx17ni.jpg&#34; alt=&#34;&#34; /&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;em&gt;供给是蓝线 S，需求是红线 D，当供给由 S1 变动为 S2 时，成交的价格和数量也随之变动。&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&#34;金钱不是财富&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#金钱不是财富&#34;&gt;#&lt;/a&gt; 金钱不是财富&lt;/h1&gt;
-&lt;p&gt;如果想要创造财富，理解什么是财富将大有裨益。财富并非和金钱等同，财富伴随着人类历史，金钱或者货币是相对近期的发明。财富才是根本的，是可以满足人类需求的物品：食物，衣服，房子，汽车…… 你可以没有金钱货币，便拥有财富。财富才是我们需要的，金钱不是。但如果财富是如此重要，为什么我们经常谈论提及的是赚钱？这不过是一种简化：金钱是一种交换财富的介质，在实践中，财富并不总是方便直接交换。&lt;/p&gt;
-&lt;p&gt;往往身上的财富并不能满足自己和家庭所需，你可以用现有的财富和别人的财富做交换。只是交换时，彼此并不能恰好拥有彼此所需可交换的财富，比如我有多余的汽车需要房子，但对方是需要汽车但没有房子，对方可以支付我房子等额的金钱货币，然后我再用这些金钱找第三者买房子。或者因为财富不好分割，但金钱很适合。金钱货币才因此应运而生。所以，对于我们而言，重要的是财富本身，而不是金钱，金钱只是一种一般等价物，方便我们进行财富转移交换的媒介。财富和金钱的关系应该是这样的图景。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;img data-src=&#34;https://p.ipic.vip/orvvw2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;em&gt;物物交换存在很多弊端，比如猫有鱼想和农民换稻米，农民是有稻米但他想用稻米和猎人换活鸡，猎人是有活鸡，但他只想吃鱼。所以交易无法进行。如果有一般等价物，比如货币，猫就可以用鱼和猎人的货币交换，然后用收入的货币和农民交换稻米。其他角色也如此，于是大家都换到自己心仪的商品。&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&#34;蛋糕谬论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#蛋糕谬论&#34;&gt;#&lt;/a&gt; 蛋糕谬论&lt;/h1&gt;
-&lt;p&gt;会有人误以为，世界上的财富总量是恒定的，在这样的上下文里，我们总是将财富称作为 “蛋糕”，但其实，财富的创造并非是零和游戏，不是我赚点，就注定有人要吃亏。&lt;strong&gt;蛋糕是可以做大的&lt;/strong&gt;。比如，今年的夏天，与其在屋子里干坐着碌碌无为，我把自家后院的荒地开垦，种了草莓，这就是在创造财富，水果成熟时，可以采摘拿到市场售卖换金钱。这个过程中，我变得富有了，但并没有人因此变得更加贫穷。伴随人类历史，财富总是不停地被创造和毁灭，但总体上，创造多于毁灭。&lt;/p&gt;
-&lt;h1 id=&#34;法治&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#法治&#34;&gt;#&lt;/a&gt; 法治&lt;/h1&gt;
-&lt;p&gt;在一个法治国家，每个人都可以自由地追逐财富，并自由使用，国家财富会逐步增加，蛋糕可以越做越大。不用担心窃取财富。毕竟，如果知道积累财富的最终结果是被他人夺取和打击，我们自然就不会去创造那么多的财富。从以前的打土豪劣绅，到最近马斯克的提问 “马云去哪里了？…… 我只是好奇，随口问一下”。&lt;/p&gt;
-&lt;h1 id=&#34;参考&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考&#34;&gt;#&lt;/a&gt; 参考&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;[1] &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvemgtaGFucy8lRTklOUMlODAlRTYlQjElODIlRTglODglODclRTQlQkUlOUIlRTclQjUlQTY=&#34;&gt; 供需曲线 &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;[2] [ How to make wealth in hackers and painters ]&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="财富，赚钱" scheme="https://limxtop1989.github.io/limxtop/tags/%E8%B4%A2%E5%AF%8C%EF%BC%8C%E8%B5%9A%E9%92%B1/" />
-        <updated>2022-10-19T14:53:22.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://limxtop1989.github.io/limxtop/2022/09/10/when-I-was-young/</id>
-        <title>钱很重要么？</title>
-        <link rel="alternate" href="https://limxtop1989.github.io/limxtop/2022/09/10/when-I-was-young/"/>
-        <content type="html">&lt;p&gt;年轻的时候，总以为钱很重要。&lt;br /&gt;
-长大以后，才发觉，那时还是太年轻。&lt;br /&gt;
-生活不仅有眼前的苟且，还有诗和远方。&lt;br /&gt;
-但也需要一路的盘缠。&lt;/p&gt;
-</content>
-        <category term="钱，年轻" scheme="https://limxtop1989.github.io/limxtop/tags/%E9%92%B1%EF%BC%8C%E5%B9%B4%E8%BD%BB/" />
-        <updated>2022-09-10T11:41:17.000Z</updated>
     </entry>
 </feed>
